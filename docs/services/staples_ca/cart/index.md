@@ -26,6 +26,17 @@ We are migrating shopping cart ownership from Shopify to an in‑house cart embe
 | Observability                           | I  | C         | A         | R        | I  | C        |
 | Rollback plan                           | A  | C         | R         | R        | I  | C        |
 
+# Current state As-is
+
+<a href="https://lucid.app/publicSegments/view/bb006507-06c0-45c7-8ea6-eab8596648bf/image.png" target="_blank">
+  <img src="https://lucid.app/publicSegments/view/bb006507-06c0-45c7-8ea6-eab8596648bf/image.png" alt="Current Cart" width="600" />
+</a>
+
+# Future state
+<a href="https://lucid.app/publicSegments/view/a38a4f42-7f72-4f1f-aad8-0969da3d9b68/image.png" target="_blank">
+  <img src="https://lucid.app/publicSegments/view/a38a4f42-7f72-4f1f-aad8-0969da3d9b68/image.png" alt="Current Cart" width="600" />
+</a>
+
 # Feature Requirements
 
 ### Must Have
