@@ -25,6 +25,7 @@ We are migrating shopping cart ownership from Shopify to an in‑house cart embe
 | Cart API ownership & state management   | I  | C         | A         | R        | I  | C        |
 | Observability                           | I  | C         | A         | R        | I  | C        |
 | Rollback plan                           | A  | C         | R         | R        | I  | C        |
+| Testing                                 | A  | C         | A         | C        | R  | C        |
 
 # Current state As-is
 
