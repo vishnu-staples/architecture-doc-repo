@@ -1,0 +1,23 @@
+site_name: Architecture Docs
+site_url: https://vishnu-staples.github.io/architecture-doc-repo/
+
+nav:
+  - Home: index.md
+  - Services:
+      - Staples CA: 
+        - Overview: services/staples_ca/index.md
+        - PRE:
+          - Overview: services/staples_ca/pre/index.md
+        - Cart Migration:
+          - Overview: services/staples_ca/cart/index.md
+          - Design: services/staples_ca/cart/architecture.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+
+use_directory_urls: false
