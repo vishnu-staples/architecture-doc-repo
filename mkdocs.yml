@@ -5,8 +5,11 @@ theme:
   name: material
 
 markdown_extensions:
-  - admonition
   - toc:
       permalink: true
+      toc_depth: 1-3
 
 use_directory_urls: false
+
+extra_css:
+  - styles/extra.css
