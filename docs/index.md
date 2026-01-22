@@ -2,7 +2,7 @@
 
 ## Platform Archtecture
 
-- [`Overview`](systems/index.md)
+- [`System Context`](systems/index.md)
 
 ## Governance
 
@@ -12,9 +12,9 @@ This repository follows defined review and documentation standards to maintain a
 
 - [`Security baseline`](standards/security.md)
 - [`Operability baseline`](standards/operability.md)
-- [`Integration standards`](standards/reference-architecture.md)
 - [`Logging and observability standards`](standards/observability.md)
 - [`Data privacy and retention standards`](standards/data-privacy.md)
+- [`Integrations`](standards/integrations.md)
 
 ## Architecture decision records
 
