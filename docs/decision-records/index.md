@@ -1,3 +1,3 @@
-# Decision Records
+# List of documents
 
-## Table of contents
+## Document List
