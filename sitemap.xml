@@ -2,10 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/index.html</loc>
-         <lastmod>2026-01-21</lastmod>
+         <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/index.html</loc>
-         <lastmod>2026-01-21</lastmod>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/ADRs/index.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/nomenclature.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/principles.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/standards.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/data-privacy.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/observablity.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/operability.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/reference-architecture.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/security.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/dot-ca/index.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/eway/index.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/print/index.html</loc>
+         <lastmod>2026-01-22</lastmod>
     </url>
 </urlset>
