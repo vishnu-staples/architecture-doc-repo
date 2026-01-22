@@ -3,6 +3,7 @@
 ## Platform Archtecture
 
 - [`System Context`](systems/index.md)
+- [`Infrastructure`](infrastructure/index.md)
 
 ## Governance
 
