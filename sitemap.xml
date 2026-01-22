@@ -5,51 +5,55 @@
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/ADRs/index.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/decision-records/index.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/nomenclature.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/nomenclature.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/principles.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/principles.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Governance/standards.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/standards.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/data-privacy.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/data-privacy.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/observablity.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/observablity.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/operability.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/operability.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/reference-architecture.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/reference-architecture.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Standards/security.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/security.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/dot-ca/index.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/index.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/eway/index.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/dot-ca/index.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
     <url>
-         <loc>https://vishnu-staples.github.io/architecture-doc-repo/Systems/print/index.html</loc>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/eway/index.html</loc>
+         <lastmod>2026-01-22</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/print/index.html</loc>
          <lastmod>2026-01-22</lastmod>
     </url>
 </urlset>
