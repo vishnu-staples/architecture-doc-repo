@@ -1,0 +1,35 @@
+{
+  "feedName": "sftp-to-sftp-basic",
+  "version": "1.0",
+  "source": {
+    "name": "Internal SFTP Server",
+    "type": "Internal-SFTP",
+    "path": "{@AppSettings.sftpintroot}/{@Message.accountID}"
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "External SFTP Server",
+      "type": "External-SFTP",
+      "path": "{@AppSettings.sftpextroot}/{@Message.accountID}/outbound"
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 2,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName}"
+    },
+    {
+      "id": 3,
+      "type": "DeleteFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    }
+  ]
+}

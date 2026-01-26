@@ -1,0 +1,64 @@
+{
+  "feedName": "sftp-to-blob-pgp-decrypt",
+  "version": "1.0",
+  "source": {
+    "name": "Vendor SFTP Server",
+    "type": "Vendor-SFTP",
+    "host": "sftp.vendor.com",
+    "port": "22",
+    "path": "/outbound/encrypted",
+    "credentials": {
+      "type": "BasicAuth",
+      "username": "{@JobSecrets.vendorUser}",
+      "password": "{@JobSecrets.vendorPass}"
+    }
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Azure Blob Storage",
+      "type": "BlobStore",
+      "endpoint": "https://storageaccount.blob.core.windows.net",
+      "path": "incoming/decrypted",
+      "credentials": {
+        "containerName": "data",
+        "connectionString": "{@JobSecrets.blobConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 2,
+      "type": "PGP-Decrypt",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "keyFile": "{@AppSettings.jobsettingsfolder}/private.key",
+      "keypassword": "{@JobSecrets.pgpPassword}"
+    },
+    {
+      "id": 3,
+      "type": "Scan",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}"
+    },
+    {
+      "id": 4,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.3.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName.name}.csv"
+    },
+    {
+      "id": 5,
+      "type": "FireEvent",
+      "sourceStream": "{@JobSettings.actions.3.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName.name}.csv",
+      "eventType": "Succeeded",
+      "eventSource": "FTS.VendorIntake",
+      "eventSubject": "File Ready",
+      "eventAccountId": "{@Message.accountID}"
+    }
+  ]
+}

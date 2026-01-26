@@ -1,0 +1,67 @@
+{
+  "feedName": "multi-file-processing",
+  "version": "1.0",
+  "source": {
+    "name": "Internal SFTP Server",
+    "type": "Internal-SFTP",
+    "path": "{@AppSettings.sftpintroot}/{@Message.accountID}/reports"
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Azure Blob Storage",
+      "type": "BlobStore",
+      "endpoint": "https://storageaccount.blob.core.windows.net",
+      "path": "archives/{@DateTimeNow:yyyy}/{@DateTimeNow:MM}",
+      "credentials": {
+        "containerName": "archives",
+        "connectionString": "{@JobSecrets.blobConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "GetFileList",
+      "sourceFile": "{@JobSettings.source.path}/*.csv",
+      "startWith": "report_",
+      "endWith": ".csv",
+      "numberOfFiles": 100,
+      "sort": "name"
+    },
+    {
+      "id": 2,
+      "type": "ConcatenateList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "concateWith": "\n",
+      "outputFile": "{@JobSettings.source.path}/consolidated_{@DateTimeNow:yyyyMMdd}.csv"
+    },
+    {
+      "id": 3,
+      "type": "ZipFileList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "outputFile": "{@JobSettings.source.path}/reports_{@DateTimeNow:yyyyMMdd}.zip"
+    },
+    {
+      "id": 4,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/reports_{@DateTimeNow:yyyyMMdd}.zip"
+    },
+    {
+      "id": 5,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.4.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/reports_{@DateTimeNow:yyyyMMdd}.zip"
+    },
+    {
+      "id": 6,
+      "type": "DeleteFileList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}"
+    },
+    {
+      "id": 7,
+      "type": "DeleteFile",
+      "sourceFile": "{@JobSettings.source.path}/reports_{@DateTimeNow:yyyyMMdd}.zip"
+    }
+  ]
+}

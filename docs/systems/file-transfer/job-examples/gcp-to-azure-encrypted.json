@@ -1,0 +1,60 @@
+{
+  "feedName": "gcp-to-azure-encrypted",
+  "version": "1.0",
+  "source": {
+    "name": "Google Cloud Storage",
+    "type": "GCP",
+    "bucketName": "source-bucket",
+    "path": "exports",
+    "servicetype": "service_account",
+    "projectID": "my-gcp-project",
+    "privateKeyID": "{@JobSecrets.gcpKeyId}",
+    "clientEmail": "fts-service@my-gcp-project.iam.gserviceaccount.com",
+    "clientID": "123456789012345678901",
+    "authUri": "https://accounts.google.com/o/oauth2/auth",
+    "tokenUri": "https://oauth2.googleapis.com/token",
+    "authProvider": "https://www.googleapis.com/oauth2/v1/certs",
+    "clientCertUrl": "https://www.googleapis.com/robot/v1/metadata/x509/fts-service%40my-gcp-project.iam.gserviceaccount.com",
+    "universeDomain": "googleapis.com",
+    "credentials": {
+      "privateKey": "{@JobSecrets.gcpPrivateKey}"
+    }
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Azure Blob Storage",
+      "type": "BlobStore",
+      "endpoint": "https://storageaccount.blob.core.windows.net",
+      "path": "incoming/encrypted",
+      "credentials": {
+        "containerName": "secure-data",
+        "connectionString": "{@JobSecrets.blobConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 2,
+      "type": "PGP-Encrypt",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "keyFile": "{@AppSettings.jobsettingsfolder}/public.key",
+      "encryptArmor": true,
+      "encryptIntegirity": true,
+      "encryptSymmetricKey": "Aes256",
+      "encryptCompressed": "ZLib",
+      "encryptFilename": "{@Message.fileName.name}.pgp"
+    },
+    {
+      "id": 3,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName.name}.pgp"
+    }
+  ]
+}
