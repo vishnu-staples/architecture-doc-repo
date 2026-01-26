@@ -13,3 +13,7 @@ use_directory_urls: false
 
 extra_css:
   - styles/extra.css
+
+plugins:
+  - search
+  - mermaid2
