@@ -1,0 +1,34 @@
+{
+  "feedName": "internal-sftp-azurefile-api",
+  "version": "1.0",
+  "source": {
+    "name": "Internal SFTP Server",
+    "type": "Internal-SFTP",
+    "path": "{@AppSettings.sftpintroot}/{@Message.accountID}/incoming"
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Azure File Share",
+      "type": "AzureFile-API",
+      "path": "/staging/uploads",
+      "credentials": {
+        "shareName": "fileshare",
+        "connectionString": "{@JobSecrets.fileShareConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 2,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName}"
+    }
+  ]
+}

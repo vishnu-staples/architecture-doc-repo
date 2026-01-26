@@ -2,62 +2,174 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/decision-records/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/nomenclature.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/principles.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/governance/raci.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/infrastructure/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/data-privacy.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/integrations.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/observability.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/operability.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/standards/security.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/dot-ca/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/eway/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/architecture/deployment-architecture.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/architecture/event-driven-architecture.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/architecture/multi-cloud-storage.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/architecture/overview.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/architecture/queue-architecture.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-event-handler.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-job-handler-price-proposal.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-job-handler-tms-carrier-pod.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-job-handler-tms-route.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-job-handler-tms-status.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-job-handler.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/components/file-transfer-common.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/data-models/credentials-model.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/data-models/job-config-model.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/data-models/jobstatus-model.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/data-models/notification-model.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/data-models/routing-config-model.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/action-types.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/jobsettings-storage.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/placeholders-reference.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/source-destination-types.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/specification.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-examples/index.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/operations/configuration-management.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/operations/deployment-guide.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/operations/monitoring-logging.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/operations/security-secrets.html</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/operations/troubleshooting-runbook.html</loc>
+         <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://vishnu-staples.github.io/architecture-doc-repo/systems/print/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <lastmod>2026-01-26</lastmod>
     </url>
 </urlset>

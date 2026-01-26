@@ -1,0 +1,72 @@
+{
+  "feedName": "fire-event-chain",
+  "version": "1.0",
+  "source": {
+    "name": "Internal SFTP Server",
+    "type": "Internal-SFTP",
+    "path": "{@AppSettings.sftpintroot}/{@Message.accountID}/batch"
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Azure Blob Storage",
+      "type": "BlobStore",
+      "endpoint": "https://storageaccount.blob.core.windows.net",
+      "path": "processed/{@DateTimeNow:yyyy}/{@DateTimeNow:MM}",
+      "credentials": {
+        "containerName": "files",
+        "connectionString": "{@JobSecrets.blobConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "GetFileList",
+      "sourceFile": "{@JobSettings.source.path}/*.csv",
+      "startWith": "batch_",
+      "endWith": ".csv",
+      "numberOfFiles": 50,
+      "sort": "name"
+    },
+    {
+      "id": 2,
+      "type": "ConcatenateList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "concateWith": "\n"
+    },
+    {
+      "id": 3,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/consolidated_{@DateTimeNow:yyyyMMddHHmmss}.csv"
+    },
+    {
+      "id": 4,
+      "type": "FireEvent",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/consolidated_{@DateTimeNow:yyyyMMddHHmmss}.csv",
+      "eventType": "Succeeded",
+      "eventSource": "FTS.BatchConsolidator",
+      "eventSubject": "Consolidated File Ready",
+      "eventAccountId": "{@Message.accountID}",
+      "eventCorrelationId": "{@Message.correlationId}",
+      "eventFileName": "consolidated_{@DateTimeNow:yyyyMMddHHmmss}.csv"
+    },
+    {
+      "id": 5,
+      "type": "FireEventList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileList}",
+      "eventType": "Succeeded",
+      "eventSource": "FTS.BatchProcessor",
+      "eventSubject": "Source File Processed",
+      "eventAccountId": "{@Message.accountID}"
+    },
+    {
+      "id": 6,
+      "type": "DeleteFileList",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}"
+    }
+  ]
+}

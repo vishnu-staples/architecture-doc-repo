@@ -1,0 +1,5057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/systems/file-transfer/job-configuration/action-types.html">
+      
+      
+        <link rel="prev" href="../data-models/routing-config-model.html">
+      
+      
+        <link rel="next" href="jobsettings-storage.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Action Types - Architecture Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../styles/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#action-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Architecture Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Action Types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Architecture Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision records
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decision records
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../decision-records/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List of documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Governance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/nomenclature.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nomenclature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/principles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/raci.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RACI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infrastructure/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physical Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Standards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../standards/data-privacy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data privacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../standards/integrations.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../standards/observability.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../standards/operability.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../standards/security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dot ca
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dot ca
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dot-ca/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eway
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Eway
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eway/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File transfer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File transfer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/deployment-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/event-driven-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event-Driven Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/multi-cloud-storage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Cloud Storage Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/overview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Architecture Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/queue-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queue Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_2" id="__nav_6_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Components
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-event-handler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileEventHandler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-job-handler-price-proposal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileJobHandler-PriceProposal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSCarrierPOD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-job-handler-tms-route.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSRoute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-job-handler-tms-status.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSStatus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-job-handler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileJobHandler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/file-transfer-common.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FileTransferCommon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_3" id="__nav_6_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-models/credentials-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credentials Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-models/job-config-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job ConfigModel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-models/jobstatus-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JobStatus Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-models/notification-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notification Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-models/routing-config-model.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routing ConfigModel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_4" id="__nav_6_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Action Types
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="action-types.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Action Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-type-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Type Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ReadFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReadFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WriteFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WriteFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeleteFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RenameFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RenameFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration (Source)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration (Destination)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getfilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GetFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GetFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zipfilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZipFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZipFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-create-zip-and-upload-to-blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Create ZIP and Upload to Blob
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenatelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConcatenateList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ConcatenateList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletefilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeleteFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgp-decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PGP-Decrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PGP-Decrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgp-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PGP-Encrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PGP-Encrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-key-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symmetric Key Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compression-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA-Encrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RSA-Encrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Encodings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fireevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FireEvent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fireeventlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEventList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FireEventList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-chaining-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Chaining Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-support-matrix-by-source-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Support Matrix by Source Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jobsettings-storage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jobsettings Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="placeholders-reference.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="source-destination-types.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source/Destination Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="specification.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Configuration Specification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_5" id="__nav_6_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-examples/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_6" id="__nav_6_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/configuration-management.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/deployment-guide.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/monitoring-logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring &amp; Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/security-secrets.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security &amp; Secrets Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/troubleshooting-runbook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting Runbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Print
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-type-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Type Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ReadFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReadFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WriteFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WriteFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeleteFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renamefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RenameFile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RenameFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration (Source)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration (Destination)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getfilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GetFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GetFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zipfilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ZipFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZipFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-create-zip-and-upload-to-blob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Create ZIP and Upload to Blob
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenatelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ConcatenateList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ConcatenateList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletefilelist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DeleteFileList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteFileList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgp-decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PGP-Decrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PGP-Decrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgp-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PGP-Encrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PGP-Encrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-key-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symmetric Key Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compression-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa-encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA-Encrypt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RSA-Encrypt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Encodings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fireevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FireEvent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fireeventlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEventList
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FireEventList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-chaining-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Chaining Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-support-matrix-by-source-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Support Matrix by Source Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="action-types">Action Types<a class="headerlink" href="#action-types" title="Permanent link">&para;</a></h1>
+<p>This document describes all 16 action types available in FTS job configurations.</p>
+<h2 id="action-type-values">Action Type Values<a class="headerlink" href="#action-type-values" title="Permanent link">&para;</a></h2>
+<p><strong>Important</strong>: Use the exact values shown in the "Value" column in your configurations.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File I/O</strong></td>
+<td><code>ReadFile</code></td>
+<td>Read file from source</td>
+</tr>
+<tr>
+<td></td>
+<td><code>WriteFile</code></td>
+<td>Write file to destination</td>
+</tr>
+<tr>
+<td></td>
+<td><code>DeleteFile</code></td>
+<td>Delete file from source</td>
+</tr>
+<tr>
+<td></td>
+<td><code>RenameFile</code></td>
+<td>Rename file on source/destination</td>
+</tr>
+<tr>
+<td><strong>File Lists</strong></td>
+<td><code>GetFileList</code></td>
+<td>Get list of files matching pattern</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ZipFileList</code></td>
+<td>Create ZIP from file list</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ConcatenateList</code></td>
+<td>Concatenate files in list</td>
+</tr>
+<tr>
+<td></td>
+<td><code>DeleteFileList</code></td>
+<td>Delete files in list</td>
+</tr>
+<tr>
+<td><strong>Encryption</strong></td>
+<td><code>PGP-Decrypt</code></td>
+<td>PGP decryption</td>
+</tr>
+<tr>
+<td></td>
+<td><code>PGP-Encrypt</code></td>
+<td>PGP encryption</td>
+</tr>
+<tr>
+<td></td>
+<td><code>RSA-Encrypt</code></td>
+<td>RSA encryption</td>
+</tr>
+<tr>
+<td><strong>Processing</strong></td>
+<td><code>Scan</code></td>
+<td>ClamAV virus scanning</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Encode</code></td>
+<td>Character encoding conversion</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td><code>FireEvent</code></td>
+<td>Fire single CloudEvent</td>
+</tr>
+<tr>
+<td></td>
+<td><code>FireEventList</code></td>
+<td>Fire events for file list</td>
+</tr>
+<tr>
+<td></td>
+<td><code>Notification</code></td>
+<td>Send notification to APIM</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="readfile">ReadFile<a class="headerlink" href="#readfile" title="Permanent link">&para;</a></h2>
+<p>Reads a file from the configured source.</p>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;type&quot;: &quot;ReadFile&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/{@Message.fileName}&quot;
+}
+</code></pre>
+<h3 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"ReadFile"</code></td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>Yes</td>
+<td>Path to file (supports placeholders)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p>File content available as <code>{@JobSettings.actions.{id}.outputStream}</code></p>
+<hr />
+<h2 id="writefile">WriteFile<a class="headerlink" href="#writefile" title="Permanent link">&para;</a></h2>
+<p>Writes file content to a destination.</p>
+<h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 3,
+  &quot;type&quot;: &quot;WriteFile&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.2.outputStream}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileName}&quot;
+}
+</code></pre>
+<h3 id="fields_1">Fields<a class="headerlink" href="#fields_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"WriteFile"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to previous action output</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td>Destination path (must reference destination)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="deletefile">DeleteFile<a class="headerlink" href="#deletefile" title="Permanent link">&para;</a></h2>
+<p>Deletes a file from the source.</p>
+<h3 id="configuration_2">Configuration<a class="headerlink" href="#configuration_2" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 4,
+  &quot;type&quot;: &quot;DeleteFile&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/{@Message.fileName}&quot;
+}
+</code></pre>
+<h3 id="fields_2">Fields<a class="headerlink" href="#fields_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"DeleteFile"</code></td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>Yes</td>
+<td>Path to file to delete</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="renamefile">RenameFile<a class="headerlink" href="#renamefile" title="Permanent link">&para;</a></h2>
+<p>Renames a file on source or destination.</p>
+<h3 id="configuration-source">Configuration (Source)<a class="headerlink" href="#configuration-source" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 5,
+  &quot;type&quot;: &quot;RenameFile&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/{@Message.fileName}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.source.path}/{@Message.fileName}.processed&quot;
+}
+</code></pre>
+<h3 id="configuration-destination">Configuration (Destination)<a class="headerlink" href="#configuration-destination" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 5,
+  &quot;type&quot;: &quot;RenameFile&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileName}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileName}.done&quot;
+}
+</code></pre>
+<h3 id="fields_3">Fields<a class="headerlink" href="#fields_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"RenameFile"</code></td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>Yes</td>
+<td>Current file path</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td>New file path</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="getfilelist">GetFileList<a class="headerlink" href="#getfilelist" title="Permanent link">&para;</a></h2>
+<p>Gets a list of files matching a pattern.</p>
+<h3 id="configuration_3">Configuration<a class="headerlink" href="#configuration_3" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;type&quot;: &quot;GetFileList&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/*.csv&quot;,
+  &quot;startWith&quot;: &quot;report_&quot;,
+  &quot;endWith&quot;: &quot;.csv&quot;,
+  &quot;numberOfFiles&quot;: 100,
+  &quot;sort&quot;: &quot;name&quot;
+}
+</code></pre>
+<h3 id="fields_4">Fields<a class="headerlink" href="#fields_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td></td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td></td>
+<td><code>"GetFileList"</code></td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>Yes</td>
+<td></td>
+<td>Path pattern with wildcards</td>
+</tr>
+<tr>
+<td><code>startWith</code></td>
+<td>No</td>
+<td></td>
+<td>Filter: filename prefix</td>
+</tr>
+<tr>
+<td><code>endWith</code></td>
+<td>No</td>
+<td></td>
+<td>Filter: filename suffix</td>
+</tr>
+<tr>
+<td><code>numberOfFiles</code></td>
+<td>No</td>
+<td>1</td>
+<td>Maximum files to return</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>No</td>
+<td></td>
+<td>Sort order</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output_1">Output<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h3>
+<p><code>listFileNames</code> populated with matching files.</p>
+<hr />
+<h2 id="zipfilelist">ZipFileList<a class="headerlink" href="#zipfilelist" title="Permanent link">&para;</a></h2>
+<p>Creates a ZIP archive from files in list.</p>
+<h3 id="configuration_4">Configuration<a class="headerlink" href="#configuration_4" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 3,
+  &quot;type&quot;: &quot;ZipFileList&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.source.path}/archive.zip&quot;
+}
+</code></pre>
+<h3 id="fields_5">Fields<a class="headerlink" href="#fields_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"ZipFileList"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to GetFileList action (provides <code>listFileNames</code>)</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td>Output ZIP file path (writes directly to disk)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="behavior">Behavior<a class="headerlink" href="#behavior" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Important</strong>: ZipFileList writes the ZIP archive <strong>directly to disk</strong> at the specified <code>outputFile</code> path. It does NOT populate <code>outputStream</code>. To transfer the created ZIP to a remote destination, you must:
+1. Use ZipFileList to create the archive locally (on the source system)
+2. Use ReadFile to read the created ZIP file
+3. Use WriteFile to upload to the remote destination</p>
+</blockquote>
+<h3 id="example-create-zip-and-upload-to-blob">Example: Create ZIP and Upload to Blob<a class="headerlink" href="#example-create-zip-and-upload-to-blob" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;actions&quot;: [
+    { &quot;id&quot;: 1, &quot;type&quot;: &quot;GetFileList&quot;, &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/*.csv&quot; },
+    { &quot;id&quot;: 2, &quot;type&quot;: &quot;ZipFileList&quot;, &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;, &quot;outputFile&quot;: &quot;{@JobSettings.source.path}/temp.zip&quot; },
+    { &quot;id&quot;: 3, &quot;type&quot;: &quot;ReadFile&quot;, &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/temp.zip&quot; },
+    { &quot;id&quot;: 4, &quot;type&quot;: &quot;WriteFile&quot;, &quot;sourceStream&quot;: &quot;{@JobSettings.actions.3.outputStream}&quot;, &quot;outputFile&quot;: &quot;{@JobSettings.destinations.1.path}/archive.zip&quot; },
+    { &quot;id&quot;: 5, &quot;type&quot;: &quot;DeleteFile&quot;, &quot;sourceFile&quot;: &quot;{@JobSettings.source.path}/temp.zip&quot; }
+  ]
+}
+</code></pre>
+<hr />
+<h2 id="concatenatelist">ConcatenateList<a class="headerlink" href="#concatenatelist" title="Permanent link">&para;</a></h2>
+<p>Concatenates files in list into single file(s).</p>
+<h3 id="configuration_5">Configuration<a class="headerlink" href="#configuration_5" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 2,
+  &quot;type&quot;: &quot;ConcatenateList&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.source.path}/consolidated.csv&quot;,
+  &quot;concateWith&quot;: &quot;\n&quot;,
+  &quot;numberOfFiles&quot;: 1000,
+  &quot;startWith&quot;: &quot;&quot;,
+  &quot;endWith&quot;: &quot;&quot;
+}
+</code></pre>
+<h3 id="fields_6">Fields<a class="headerlink" href="#fields_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td></td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td></td>
+<td><code>"ConcatenateList"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td></td>
+<td>Reference to GetFileList action</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td></td>
+<td>Output file path (writes directly to disk)</td>
+</tr>
+<tr>
+<td><code>concateWith</code></td>
+<td>No</td>
+<td><code>""</code></td>
+<td>Separator between file contents</td>
+</tr>
+<tr>
+<td><code>numberOfFiles</code></td>
+<td>No</td>
+<td>1</td>
+<td>Max files per output (splits if exceeded)</td>
+</tr>
+<tr>
+<td><code>startWith</code></td>
+<td>No</td>
+<td><code>""</code></td>
+<td>Content to prepend</td>
+</tr>
+<tr>
+<td><code>endWith</code></td>
+<td>No</td>
+<td><code>""</code></td>
+<td>Content to append</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output_2">Output<a class="headerlink" href="#output_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates concatenated file(s) on disk at <code>outputFile</code></li>
+<li>Populates <code>listConcateFileNames</code> with output file paths</li>
+<li>If <code>numberOfFiles</code> causes splits, files are named: <code>{name}_0.ext</code>, <code>{name}_1.ext</code>, etc.</li>
+</ul>
+<h3 id="behavior_1">Behavior<a class="headerlink" href="#behavior_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Note</strong>: ConcatenateList writes directly to disk. The <code>listConcateFileNames</code> can be used by FireEventList to fire events for each concatenated file.</p>
+</blockquote>
+<hr />
+<h2 id="deletefilelist">DeleteFileList<a class="headerlink" href="#deletefilelist" title="Permanent link">&para;</a></h2>
+<p>Deletes all files in list.</p>
+<h3 id="configuration_6">Configuration<a class="headerlink" href="#configuration_6" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 4,
+  &quot;type&quot;: &quot;DeleteFileList&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;
+}
+</code></pre>
+<h3 id="fields_7">Fields<a class="headerlink" href="#fields_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"DeleteFileList"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to GetFileList action</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pgp-decrypt">PGP-Decrypt<a class="headerlink" href="#pgp-decrypt" title="Permanent link">&para;</a></h2>
+<p>Decrypts PGP-encrypted content.</p>
+<h3 id="configuration_7">Configuration<a class="headerlink" href="#configuration_7" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;type&quot;: &quot;PGP-Decrypt&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;keyFile&quot;: &quot;{@AppSettings.jobsettingsfolder}/private.key&quot;,
+  &quot;keypassword&quot;: &quot;{@JobSecrets.pgpPassword}&quot;
+}
+</code></pre>
+<h3 id="fields_8">Fields<a class="headerlink" href="#fields_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"PGP-Decrypt"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to encrypted content</td>
+</tr>
+<tr>
+<td><code>keyFile</code></td>
+<td>Yes</td>
+<td>Path to PGP private key</td>
+</tr>
+<tr>
+<td><code>keypassword</code></td>
+<td>No</td>
+<td>Key passphrase (from secrets)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pgp-encrypt">PGP-Encrypt<a class="headerlink" href="#pgp-encrypt" title="Permanent link">&para;</a></h2>
+<p>Encrypts content using PGP.</p>
+<h3 id="configuration_8">Configuration<a class="headerlink" href="#configuration_8" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;type&quot;: &quot;PGP-Encrypt&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;keyFile&quot;: &quot;{@AppSettings.jobsettingsfolder}/public.key&quot;,
+  &quot;encryptArmor&quot;: true,
+  &quot;encryptIntegirity&quot;: true,
+  &quot;encryptSymmetricKey&quot;: &quot;Cast5&quot;,
+  &quot;encryptCompressed&quot;: &quot;Uncompressed&quot;,
+  &quot;encryptFilename&quot;: &quot;{@Message.fileName.name}.pgp&quot;,
+  &quot;encryptSubkey&quot;: false
+}
+</code></pre>
+<h3 id="fields_9">Fields<a class="headerlink" href="#fields_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td></td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td></td>
+<td><code>"PGP-Encrypt"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td></td>
+<td>Reference to content to encrypt</td>
+</tr>
+<tr>
+<td><code>keyFile</code></td>
+<td>Yes</td>
+<td></td>
+<td>Path to PGP public key</td>
+</tr>
+<tr>
+<td><code>encryptArmor</code></td>
+<td>No</td>
+<td><code>true</code></td>
+<td>ASCII armor output</td>
+</tr>
+<tr>
+<td><code>encryptIntegirity</code></td>
+<td>No</td>
+<td><code>true</code></td>
+<td>Include integrity check</td>
+</tr>
+<tr>
+<td><code>encryptSymmetricKey</code></td>
+<td>No</td>
+<td><code>"Cast5"</code></td>
+<td>Symmetric algorithm</td>
+</tr>
+<tr>
+<td><code>encryptCompressed</code></td>
+<td>No</td>
+<td><code>"Uncompressed"</code></td>
+<td>Compression algorithm</td>
+</tr>
+<tr>
+<td><code>encryptFilename</code></td>
+<td>No</td>
+<td><code>""</code></td>
+<td>Filename in encrypted packet</td>
+</tr>
+<tr>
+<td><code>encryptSubkey</code></td>
+<td>No</td>
+<td><code>false</code></td>
+<td>Use encryption subkey</td>
+</tr>
+</tbody>
+</table>
+<h3 id="symmetric-key-algorithms">Symmetric Key Algorithms<a class="headerlink" href="#symmetric-key-algorithms" title="Permanent link">&para;</a></h3>
+<p><code>Cast5</code>, <code>Aes128</code>, <code>Aes192</code>, <code>Aes256</code>, <code>Twofish</code>, <code>Blowfish</code>, <code>TripleDes</code></p>
+<h3 id="compression-algorithms">Compression Algorithms<a class="headerlink" href="#compression-algorithms" title="Permanent link">&para;</a></h3>
+<p><code>Uncompressed</code>, <code>Zip</code>, <code>ZLib</code>, <code>BZip2</code></p>
+<hr />
+<h2 id="rsa-encrypt">RSA-Encrypt<a class="headerlink" href="#rsa-encrypt" title="Permanent link">&para;</a></h2>
+<p>Encrypts content using RSA.</p>
+<h3 id="configuration_9">Configuration<a class="headerlink" href="#configuration_9" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;type&quot;: &quot;RSA-Encrypt&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;keyFile&quot;: &quot;{@AppSettings.jobsettingsfolder}/rsa_public.pem&quot;
+}
+</code></pre>
+<h3 id="fields_10">Fields<a class="headerlink" href="#fields_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"RSA-Encrypt"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to content to encrypt</td>
+</tr>
+<tr>
+<td><code>keyFile</code></td>
+<td>Yes</td>
+<td>Path to RSA public key</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scan">Scan<a class="headerlink" href="#scan" title="Permanent link">&para;</a></h2>
+<p>Performs ClamAV virus scanning.</p>
+<h3 id="configuration_10">Configuration<a class="headerlink" href="#configuration_10" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 2,
+  &quot;type&quot;: &quot;Scan&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;
+}
+</code></pre>
+<h3 id="fields_11">Fields<a class="headerlink" href="#fields_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"Scan"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to content to scan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="behavior_2">Behavior<a class="headerlink" href="#behavior_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If clean: Passes content through unchanged</li>
+<li>If infected: Action fails with virus details in error message</li>
+</ul>
+<hr />
+<h2 id="encode">Encode<a class="headerlink" href="#encode" title="Permanent link">&para;</a></h2>
+<p>Converts character encoding.</p>
+<h3 id="configuration_11">Configuration<a class="headerlink" href="#configuration_11" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 2,
+  &quot;type&quot;: &quot;Encode&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;source&quot;: &quot;UTF-8&quot;,
+  &quot;target&quot;: &quot;ASCII&quot;
+}
+</code></pre>
+<h3 id="fields_12">Fields<a class="headerlink" href="#fields_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"Encode"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to content to encode</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>Yes</td>
+<td>Source encoding</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Yes</td>
+<td>Target encoding</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supported-encodings">Supported Encodings<a class="headerlink" href="#supported-encodings" title="Permanent link">&para;</a></h3>
+<p><code>TEXT</code>, <code>UNICODE</code>, <code>ASCII</code>, <code>UTF-8</code>, <code>UTF-7</code>, <code>UTF-32</code></p>
+<hr />
+<h2 id="fireevent">FireEvent<a class="headerlink" href="#fireevent" title="Permanent link">&para;</a></h2>
+<p>Fires a CloudEvent notification.</p>
+<h3 id="configuration_12">Configuration<a class="headerlink" href="#configuration_12" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 5,
+  &quot;type&quot;: &quot;FireEvent&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.3.outputStream}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileName}&quot;,
+  &quot;eventType&quot;: &quot;Succeeded&quot;,
+  &quot;eventSource&quot;: &quot;FTS.JobHandler&quot;,
+  &quot;eventSubject&quot;: &quot;File Ready&quot;,
+  &quot;eventAccountId&quot;: &quot;{@Message.accountID}&quot;,
+  &quot;eventId&quot;: &quot;&quot;,
+  &quot;eventCorrelationId&quot;: &quot;{@Message.correlationId}&quot;,
+  &quot;eventFileName&quot;: &quot;{@Message.fileName}&quot;
+}
+</code></pre>
+<h3 id="fields_13">Fields<a class="headerlink" href="#fields_13" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"FireEvent"</code></td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>Yes</td>
+<td>Reference to file content</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td>File path for event</td>
+</tr>
+<tr>
+<td><code>eventType</code></td>
+<td>Yes</td>
+<td>Event type to emit</td>
+</tr>
+<tr>
+<td><code>eventSource</code></td>
+<td>Yes</td>
+<td>Event source identifier</td>
+</tr>
+<tr>
+<td><code>eventSubject</code></td>
+<td>Yes</td>
+<td>Event subject</td>
+</tr>
+<tr>
+<td><code>eventAccountId</code></td>
+<td>Yes</td>
+<td>Target account ID</td>
+</tr>
+<tr>
+<td><code>eventId</code></td>
+<td>No</td>
+<td>Event ID (auto-generated if empty)</td>
+</tr>
+<tr>
+<td><code>eventCorrelationId</code></td>
+<td>No</td>
+<td>Correlation ID</td>
+</tr>
+<tr>
+<td><code>eventFileName</code></td>
+<td>No</td>
+<td>Filename for event</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fireeventlist">FireEventList<a class="headerlink" href="#fireeventlist" title="Permanent link">&para;</a></h2>
+<p>Fires events for each file in a list.</p>
+<h3 id="configuration_13">Configuration<a class="headerlink" href="#configuration_13" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 4,
+  &quot;type&quot;: &quot;FireEventList&quot;,
+  &quot;sourceStream&quot;: &quot;{@JobSettings.actions.1.outputStream}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileList}&quot;,
+  &quot;eventType&quot;: &quot;Succeeded&quot;,
+  &quot;eventSource&quot;: &quot;FTS.BatchProcessor&quot;,
+  &quot;eventSubject&quot;: &quot;Batch File Ready&quot;,
+  &quot;eventAccountId&quot;: &quot;{@Message.accountID}&quot;
+}
+</code></pre>
+<h3 id="fields_14">Fields<a class="headerlink" href="#fields_14" title="Permanent link">&para;</a></h3>
+<p>Same as FireEvent, but fires one event per file in the list.</p>
+<hr />
+<h2 id="notification">Notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h2>
+<p>Sends notification to APIM endpoint.</p>
+<blockquote>
+<p><strong>Important</strong>: The <code>outputFile</code> must reference an <code>Internal-APIM</code> destination. The Notification action only executes for destinations with type <code>Internal-APIM</code>.</p>
+</blockquote>
+<h3 id="configuration_14">Configuration<a class="headerlink" href="#configuration_14" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+  &quot;id&quot;: 4,
+  &quot;type&quot;: &quot;Notification&quot;,
+  &quot;sourceFile&quot;: &quot;{@JobSettings.destinations.1.path}/{@Message.fileName}&quot;,
+  &quot;outputFile&quot;: &quot;{@JobSettings.destinations.2.path}&quot;,
+  &quot;eventType&quot;: &quot;Succeeded&quot;,
+  &quot;eventAccountId&quot;: &quot;{@Message.accountID}&quot;,
+  &quot;eventCorrelationId&quot;: &quot;{@Message.correlationId}&quot;
+}
+</code></pre>
+<p>Where destination 2 is configured as:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: 2,
+  &quot;type&quot;: &quot;Internal-APIM&quot;,
+  &quot;TargetUrl&quot;: &quot;https://api.example.com/notify&quot;,
+  &quot;TimeoutMs&quot;: &quot;30000&quot;
+}
+</code></pre>
+<h3 id="fields_15">Fields<a class="headerlink" href="#fields_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Yes</td>
+<td>Action identifier</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Yes</td>
+<td><code>"Notification"</code></td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>Yes</td>
+<td>Source file reference</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>Yes</td>
+<td>Must reference an <code>Internal-APIM</code> destination</td>
+</tr>
+<tr>
+<td><code>eventType</code></td>
+<td>No</td>
+<td>Event type for notification</td>
+</tr>
+<tr>
+<td><code>eventAccountId</code></td>
+<td>Yes</td>
+<td>Account identifier</td>
+</tr>
+<tr>
+<td><code>eventCorrelationId</code></td>
+<td>No</td>
+<td>Correlation ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="behavior_3">Behavior<a class="headerlink" href="#behavior_3" title="Permanent link">&para;</a></h3>
+<p>Sends CloudEvent-formatted notification to configured APIM endpoint.</p>
+<hr />
+<h2 id="action-chaining-reference">Action Chaining Reference<a class="headerlink" href="#action-chaining-reference" title="Permanent link">&para;</a></h2>
+<pre><code>Action 1 (ReadFile)
+    └── outputStream ──&gt; Action 2 (PGP-Decrypt)
+                              └── outputStream ──&gt; Action 3 (Scan)
+                                                        └── outputStream ──&gt; Action 4 (WriteFile)
+</code></pre>
+<p>Reference pattern: <code>{@JobSettings.actions.{n}.outputStream}</code> (1-based indexing)</p>
+<hr />
+<h2 id="action-support-matrix-by-source-type">Action Support Matrix by Source Type<a class="headerlink" href="#action-support-matrix-by-source-type" title="Permanent link">&para;</a></h2>
+<p>Not all actions are supported by all source types. Below is the compatibility matrix:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th style="text-align: center;">Internal-SFTP</th>
+<th style="text-align: center;">External-SFTP</th>
+<th style="text-align: center;">Vendor-SFTP</th>
+<th style="text-align: center;">Vendor-FTP</th>
+<th style="text-align: center;">BlobStore</th>
+<th style="text-align: center;">GCP</th>
+<th style="text-align: center;">AmazonS3</th>
+<th style="text-align: center;">Internal-APIM</th>
+<th style="text-align: center;">AzureFile-API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ReadFile</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>WriteFile</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>DeleteFile</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>RenameFile</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>GetFileList</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>DeleteFileList</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong>
+- <code>✓</code> = Supported
+- <code>-</code> = Not supported
+- Actions not listed (PGP-Decrypt, PGP-Encrypt, RSA-Encrypt, Scan, Encode, FireEvent, FireEventList, Notification) operate on in-memory streams and are source-type independent</p>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="specification.html">Job Configuration Specification</a></li>
+<li><a href="placeholders-reference.html">Placeholders Reference</a></li>
+<li><a href="../job-examples/index.html">Job Examples</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

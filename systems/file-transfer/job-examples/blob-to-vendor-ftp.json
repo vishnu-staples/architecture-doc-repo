@@ -1,0 +1,49 @@
+{
+  "feedName": "blob-to-vendor-ftp",
+  "version": "1.0",
+  "source": {
+    "name": "Azure Blob Storage",
+    "type": "BlobStore",
+    "endpoint": "https://storageaccount.blob.core.windows.net",
+    "path": "outbound/pending",
+    "credentials": {
+      "containerName": "exports",
+      "connectionString": "{@JobSecrets.blobConnection}"
+    }
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Vendor FTP Server",
+      "type": "Vendor-FTP",
+      "host": "ftp.vendor.com",
+      "port": "21",
+      "path": "/inbound",
+      "ssl": true,
+      "credentials": {
+        "username": "{@JobSecrets.ftpUser}",
+        "password": "{@JobSecrets.ftpPass}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 2,
+      "type": "Encode",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "source": "UTF-8",
+      "target": "ASCII"
+    },
+    {
+      "id": 3,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/{@Message.fileName}"
+    }
+  ]
+}
