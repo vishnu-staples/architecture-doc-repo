@@ -8,6 +8,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 1-3
+  - attr_list
 
 use_directory_urls: false
 
@@ -17,3 +18,4 @@ extra_css:
 plugins:
   - search
   - mermaid2
+  - glightbox
