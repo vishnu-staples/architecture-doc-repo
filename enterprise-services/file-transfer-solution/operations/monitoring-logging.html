@@ -5,26 +5,28 @@
       
       
       
-        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/standards/security.html">
+        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/enterprise-services/file-transfer-solution/operations/monitoring-logging.html">
       
       
-        <link rel="prev" href="operability.html">
+        <link rel="prev" href="deployment-guide.html">
       
+      
+        <link rel="next" href="security-secrets.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Security - Architecture Docs</title>
+        <title>Monitoring &amp; Logging - Architecture Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -43,15 +45,15 @@
       
     
     
-      <link rel="stylesheet" href="../styles/extra.css">
+      <link rel="stylesheet" href="../../../styles/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -72,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#monitoring-logging" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Security
+              Monitoring &amp; Logging
             
           </span>
         </div>
@@ -182,7 +189,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -200,7 +207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -274,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/index.html" class="md-nav__link">
         
   
   
@@ -349,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/index.html" class="md-nav__link">
         
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/context.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/context.html" class="md-nav__link">
         
   
   
@@ -405,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/operablity.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/operablity.html" class="md-nav__link">
         
   
   
@@ -433,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/security.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/security.html" class="md-nav__link">
         
   
   
@@ -516,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/eway/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/eway/index.html" class="md-nav__link">
         
   
   
@@ -599,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/print/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/print/index.html" class="md-nav__link">
         
   
   
@@ -639,18 +646,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -671,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -736,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/eai/index.html" class="md-nav__link">
+      <a href="../../eai/index.html" class="md-nav__link">
         
   
   
@@ -769,18 +778,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -801,7 +812,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -866,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/deployment-architecture.html" class="md-nav__link">
+      <a href="../architecture/deployment-architecture.html" class="md-nav__link">
         
   
   
@@ -894,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/event-driven-architecture.html" class="md-nav__link">
+      <a href="../architecture/event-driven-architecture.html" class="md-nav__link">
         
   
   
@@ -922,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/logical-architecture.html" class="md-nav__link">
+      <a href="../architecture/logical-architecture.html" class="md-nav__link">
         
   
   
@@ -950,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/multi-cloud-storage.html" class="md-nav__link">
+      <a href="../architecture/multi-cloud-storage.html" class="md-nav__link">
         
   
   
@@ -978,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/overview.html" class="md-nav__link">
+      <a href="../architecture/overview.html" class="md-nav__link">
         
   
   
@@ -1006,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/physical-architecture.html" class="md-nav__link">
+      <a href="../architecture/physical-architecture.html" class="md-nav__link">
         
   
   
@@ -1034,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/queue-architecture.html" class="md-nav__link">
+      <a href="../architecture/queue-architecture.html" class="md-nav__link">
         
   
   
@@ -1117,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-event-handler.html" class="md-nav__link">
+      <a href="../components/file-event-handler.html" class="md-nav__link">
         
   
   
@@ -1145,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-price-proposal.html" class="md-nav__link">
+      <a href="../components/file-job-handler-price-proposal.html" class="md-nav__link">
         
   
   
@@ -1173,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
         
   
   
@@ -1201,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-route.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-route.html" class="md-nav__link">
         
   
   
@@ -1229,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-status.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-status.html" class="md-nav__link">
         
   
   
@@ -1257,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler.html" class="md-nav__link">
+      <a href="../components/file-job-handler.html" class="md-nav__link">
         
   
   
@@ -1285,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-transfer-common.html" class="md-nav__link">
+      <a href="../components/file-transfer-common.html" class="md-nav__link">
         
   
   
@@ -1368,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/credentials-model.html" class="md-nav__link">
+      <a href="../data-models/credentials-model.html" class="md-nav__link">
         
   
   
@@ -1396,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/job-config-model.html" class="md-nav__link">
+      <a href="../data-models/job-config-model.html" class="md-nav__link">
         
   
   
@@ -1424,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/jobstatus-model.html" class="md-nav__link">
+      <a href="../data-models/jobstatus-model.html" class="md-nav__link">
         
   
   
@@ -1452,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/notification-model.html" class="md-nav__link">
+      <a href="../data-models/notification-model.html" class="md-nav__link">
         
   
   
@@ -1480,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/routing-config-model.html" class="md-nav__link">
+      <a href="../data-models/routing-config-model.html" class="md-nav__link">
         
   
   
@@ -1563,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/action-types.html" class="md-nav__link">
+      <a href="../job-configuration/action-types.html" class="md-nav__link">
         
   
   
@@ -1591,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/jobsettings-storage.html" class="md-nav__link">
+      <a href="../job-configuration/jobsettings-storage.html" class="md-nav__link">
         
   
   
@@ -1619,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/placeholders-reference.html" class="md-nav__link">
+      <a href="../job-configuration/placeholders-reference.html" class="md-nav__link">
         
   
   
@@ -1647,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/source-destination-types.html" class="md-nav__link">
+      <a href="../job-configuration/source-destination-types.html" class="md-nav__link">
         
   
   
@@ -1675,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/specification.html" class="md-nav__link">
+      <a href="../job-configuration/specification.html" class="md-nav__link">
         
   
   
@@ -1758,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-examples/index.html" class="md-nav__link">
+      <a href="../job-examples/index.html" class="md-nav__link">
         
   
   
@@ -1791,18 +1802,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
@@ -1823,7 +1836,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1841,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/configuration-management.html" class="md-nav__link">
+      <a href="configuration-management.html" class="md-nav__link">
         
   
   
@@ -1869,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/deployment-guide.html" class="md-nav__link">
+      <a href="deployment-guide.html" class="md-nav__link">
         
   
   
@@ -1894,10 +1907,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/monitoring-logging.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring &amp; Logging
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="monitoring-logging.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1913,6 +1953,409 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datadog-apm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datadog APM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datadog APM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Traces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlog-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NLog Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NLog Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fileeventhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FileEventHandler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filejobhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FileJobHandler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alerts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warning Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration-datadog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration (Datadog)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-failed-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Failed Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-jobs-by-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Jobs by Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-slow-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Slow Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-retry-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Retry Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-with-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting with Logs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting with Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Not Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Retention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1925,7 +2368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/security-secrets.html" class="md-nav__link">
+      <a href="security-secrets.html" class="md-nav__link">
         
   
   
@@ -1953,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/troubleshooting-runbook.html" class="md-nav__link">
+      <a href="troubleshooting-runbook.html" class="md-nav__link">
         
   
   
@@ -2044,7 +2487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/payment-gateway/index.html" class="md-nav__link">
+      <a href="../../payment-gateway/index.html" class="md-nav__link">
         
   
   
@@ -2127,7 +2570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/pre/index.html" class="md-nav__link">
+      <a href="../../pre/index.html" class="md-nav__link">
         
   
   
@@ -2217,7 +2660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/nomenclature.html" class="md-nav__link">
+      <a href="../../../governance/nomenclature.html" class="md-nav__link">
         
   
   
@@ -2245,7 +2688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/principles.html" class="md-nav__link">
+      <a href="../../../governance/principles.html" class="md-nav__link">
         
   
   
@@ -2273,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/raci.html" class="md-nav__link">
+      <a href="../../../governance/raci.html" class="md-nav__link">
         
   
   
@@ -2355,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure/index.html" class="md-nav__link">
+      <a href="../../../infrastructure/index.html" class="md-nav__link">
         
   
   
@@ -2387,20 +2830,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -2421,7 +2862,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2439,7 +2880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-privacy.html" class="md-nav__link">
+      <a href="../../../standards/data-privacy.html" class="md-nav__link">
         
   
   
@@ -2467,7 +2908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integrations.html" class="md-nav__link">
+      <a href="../../../standards/integrations.html" class="md-nav__link">
         
   
   
@@ -2495,7 +2936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="observability.html" class="md-nav__link">
+      <a href="../../../standards/observability.html" class="md-nav__link">
         
   
   
@@ -2523,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="operability.html" class="md-nav__link">
+      <a href="../../../standards/operability.html" class="md-nav__link">
         
   
   
@@ -2548,17 +2989,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="security.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../standards/security.html" class="md-nav__link">
         
   
   
@@ -2574,7 +3008,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2604,6 +3037,399 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datadog-apm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datadog APM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datadog APM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Traces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlog-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NLog Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NLog Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fileeventhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FileEventHandler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filejobhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FileJobHandler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Health Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alerts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warning Alerts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration-datadog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alert Configuration (Datadog)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-failed-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Failed Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-jobs-by-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Jobs by Account
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-slow-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Slow Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-retry-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Find Retry Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-with-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting with Logs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting with Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#job-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Not Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Retention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2620,9 +3446,415 @@
 
 
 
-  <h1>Security</h1>
+<h1 id="monitoring-logging">Monitoring &amp; Logging<a class="headerlink" href="#monitoring-logging" title="Permanent link">¶</a></h1>
+<p>This guide covers monitoring FTS components using Datadog APM and NLog.</p>
+<h2 id="monitoring-architecture">Monitoring Architecture<a class="headerlink" href="#monitoring-architecture" title="Permanent link">¶</a></h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                     FTS Components                           │
+├─────────────────────────────────────────────────────────────┤
+│ FileEventHandler │ FileJobHandler │ Specialized Handlers    │
+└────────┬─────────┴────────┬───────┴────────────┬────────────┘
+         │                  │                    │
+         ▼                  ▼                    ▼
+    ┌─────────────────────────────────────────────────────┐
+    │                   Datadog Agent                      │
+    │                 (APM + Logs)                         │
+    └─────────────────────────┬───────────────────────────┘
+                              │
+                              ▼
+    ┌─────────────────────────────────────────────────────┐
+    │                   Datadog Cloud                      │
+    │    Dashboards │ Alerts │ Traces │ Log Explorer      │
+    └─────────────────────────────────────────────────────┘
+</code></pre>
+<h2 id="datadog-apm">Datadog APM<a class="headerlink" href="#datadog-apm" title="Permanent link">¶</a></h2>
+<h3 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">¶</a></h3>
+<p>FTS components include Datadog APM via build arguments:</p>
+<pre><code class="language-dockerfile">ARG ARG_APM_VENDOR=datadog
+</code></pre>
+<h3 id="trace-context">Trace Context<a class="headerlink" href="#trace-context" title="Permanent link">¶</a></h3>
+<p>Traces propagate through:
+- Event Hub messages
+- Queue messages
+- HTTP calls to APIs</p>
+<h3 id="key-traces">Key Traces<a class="headerlink" href="#key-traces" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FileEventHandler</td>
+<td>EventHub.Receive</td>
+<td>Event ingestion</td>
+</tr>
+<tr>
+<td>FileEventHandler</td>
+<td>Table.Query</td>
+<td>Routing lookup</td>
+</tr>
+<tr>
+<td>FileEventHandler</td>
+<td>Queue.Send</td>
+<td>Message routing</td>
+</tr>
+<tr>
+<td>FileJobHandler</td>
+<td>Queue.Receive</td>
+<td>Job pickup</td>
+</tr>
+<tr>
+<td>FileJobHandler</td>
+<td>Action.Execute</td>
+<td>Action processing</td>
+</tr>
+<tr>
+<td>FileJobHandler</td>
+<td>Server.ReadFile</td>
+<td>File read</td>
+</tr>
+<tr>
+<td>FileJobHandler</td>
+<td>Server.WriteFile</td>
+<td>File write</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nlog-configuration">NLog Configuration<a class="headerlink" href="#nlog-configuration" title="Permanent link">¶</a></h2>
+<h3 id="log-levels">Log Levels<a class="headerlink" href="#log-levels" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debug</td>
+<td>Detailed debugging (disabled in prod)</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>Normal operation flow</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Recoverable issues</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>Operation failures</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-format">Log Format<a class="headerlink" href="#log-format" title="Permanent link">¶</a></h3>
+<pre><code class="language-csharp">Logger.Info($"Start ActionProcess Action method ActionID={action.id}, ActionType={action.type}. MessageId={currentMessageInfo.MessageId}");
+</code></pre>
+<h3 id="example-logs">Example Logs<a class="headerlink" href="#example-logs" title="Permanent link">¶</a></h3>
+<p><strong>Job Start</strong>:</p>
+<pre><code>INFO: Start Process MessageId=abc-123, Source=FTP.File.ExternalService, AccountID=ACCOUNT001
+</code></pre>
+<p><strong>Action Execution</strong>:</p>
+<pre><code>INFO: Start Action ReadFile by ActionID=0, ActionType=ReadFile. MessageId=abc-123
+INFO: ReadFile method ended. File Successfully read
+</code></pre>
+<p><strong>Action Failure</strong>:</p>
+<pre><code>ERROR: Action_Read method failed. ActionID=0, ActionType=ReadFile. MessageId=abc-123
+</code></pre>
+<h2 id="key-metrics">Key Metrics<a class="headerlink" href="#key-metrics" title="Permanent link">¶</a></h2>
+<h3 id="fileeventhandler">FileEventHandler<a class="headerlink" href="#fileeventhandler" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Alert Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Events received/sec</td>
+<td>Event ingestion rate</td>
+<td>&lt; 10% of normal</td>
+</tr>
+<tr>
+<td>Invalid message rate</td>
+<td>Validation failures</td>
+<td>&gt; 5%</td>
+</tr>
+<tr>
+<td>Routing success rate</td>
+<td>Messages routed</td>
+<td>&lt; 95%</td>
+</tr>
+<tr>
+<td>Queue send latency</td>
+<td>Message publish time</td>
+<td>&gt; 1000ms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filejobhandler">FileJobHandler<a class="headerlink" href="#filejobhandler" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Alert Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jobs processed/min</td>
+<td>Processing throughput</td>
+<td>&lt; 50% of normal</td>
+</tr>
+<tr>
+<td>Job success rate</td>
+<td>Completed successfully</td>
+<td>&lt; 95%</td>
+</tr>
+<tr>
+<td>Action failure rate</td>
+<td>Individual actions</td>
+<td>&gt; 10%</td>
+</tr>
+<tr>
+<td>Processing latency</td>
+<td>End-to-end time</td>
+<td>&gt; 60s</td>
+</tr>
+<tr>
+<td>Retry rate</td>
+<td>Operations retried</td>
+<td>&gt; 20%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+<th>Alert Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pod CPU usage</td>
+<td>Container CPU</td>
+<td>&gt; 80%</td>
+</tr>
+<tr>
+<td>Pod memory usage</td>
+<td>Container memory</td>
+<td>&gt; 80%</td>
+</tr>
+<tr>
+<td>Queue depth</td>
+<td>Messages pending</td>
+<td>&gt; 1000</td>
+</tr>
+<tr>
+<td>Storage latency</td>
+<td>Azure File ops</td>
+<td>&gt; 500ms</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dashboards">Dashboards<a class="headerlink" href="#dashboards" title="Permanent link">¶</a></h2>
+<h3 id="operations-dashboard">Operations Dashboard<a class="headerlink" href="#operations-dashboard" title="Permanent link">¶</a></h3>
+<p>Key widgets:
+- Job success/failure rate (time series)
+- Events processed (counter)
+- Queue depth (gauge)
+- Error rate by action type (pie chart)
+- Top failing accounts (table)</p>
+<h3 id="health-dashboard">Health Dashboard<a class="headerlink" href="#health-dashboard" title="Permanent link">¶</a></h3>
+<p>Key widgets:
+- Service uptime (SLO)
+- Pod status (status map)
+- Resource utilization (heatmap)
+- Azure service health (status)</p>
+<h2 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">¶</a></h2>
+<h3 id="critical-alerts">Critical Alerts<a class="headerlink" href="#critical-alerts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service Down</td>
+<td>No events in 5 min</td>
+<td>Page on-call</td>
+</tr>
+<tr>
+<td>High Error Rate</td>
+<td>&gt; 10% failures</td>
+<td>Notify team</td>
+</tr>
+<tr>
+<td>Queue Backup</td>
+<td>&gt; 10000 messages</td>
+<td>Scale handlers</td>
+</tr>
+<tr>
+<td>Pod CrashLoop</td>
+<td>&gt; 3 restarts/5min</td>
+<td>Page on-call</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warning-alerts">Warning Alerts<a class="headerlink" href="#warning-alerts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elevated Latency</td>
+<td>p95 &gt; 30s</td>
+<td>Monitor</td>
+</tr>
+<tr>
+<td>Retry Rate High</td>
+<td>&gt; 20%</td>
+<td>Investigate</td>
+</tr>
+<tr>
+<td>Memory Pressure</td>
+<td>&gt; 70%</td>
+<td>Plan scaling</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-configuration-datadog">Alert Configuration (Datadog)<a class="headerlink" href="#alert-configuration-datadog" title="Permanent link">¶</a></h3>
+<pre><code class="language-yaml"># Example monitor
+name: FTS Job Failure Rate
+type: metric alert
+query: |
+  sum(last_5m):sum:fts.jobs.failed{*}.as_count() /
+  sum:fts.jobs.total{*}.as_count() * 100 &gt; 10
+message: |
+  Job failure rate exceeded 10% in the last 5 minutes.
 
+  Check Datadog logs for error details.
+  Review jobstatus table for failed jobs.
 
+  @slack-fts-alerts
+options:
+  thresholds:
+    critical: 10
+    warning: 5
+</code></pre>
+<h2 id="log-queries">Log Queries<a class="headerlink" href="#log-queries" title="Permanent link">¶</a></h2>
+<h3 id="find-failed-jobs">Find Failed Jobs<a class="headerlink" href="#find-failed-jobs" title="Permanent link">¶</a></h3>
+<pre><code>service:file-job-handler status:error @level:ERROR
+</code></pre>
+<h3 id="find-jobs-by-account">Find Jobs by Account<a class="headerlink" href="#find-jobs-by-account" title="Permanent link">¶</a></h3>
+<pre><code>service:file-job-handler @accountId:ACCOUNT001
+</code></pre>
+<h3 id="find-slow-operations">Find Slow Operations<a class="headerlink" href="#find-slow-operations" title="Permanent link">¶</a></h3>
+<pre><code>service:file-job-handler @duration:&gt;30000
+</code></pre>
+<h3 id="find-retry-events">Find Retry Events<a class="headerlink" href="#find-retry-events" title="Permanent link">¶</a></h3>
+<pre><code>service:file-job-handler "Sleep for * Second"
+</code></pre>
+<h2 id="troubleshooting-with-logs">Troubleshooting with Logs<a class="headerlink" href="#troubleshooting-with-logs" title="Permanent link">¶</a></h2>
+<h3 id="job-not-processing">Job Not Processing<a class="headerlink" href="#job-not-processing" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Check FileEventHandler for routing:
+   <code>service:file-event-handler @accountId:ACCOUNT001</code></p>
+</li>
+<li>
+<p>Check if message reached queue:
+   <code>service:file-event-handler "Message Sent to Queue"</code></p>
+</li>
+<li>
+<p>Check handler pickup:
+   <code>service:file-job-handler "Start Process"</code></p>
+</li>
+</ol>
+<h3 id="action-failures">Action Failures<a class="headerlink" href="#action-failures" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Find the failed action:
+   <code>service:file-job-handler @messageId:abc-123 status:error</code></p>
+</li>
+<li>
+<p>Check retry attempts:
+   <code>service:file-job-handler @messageId:abc-123 "Try *"</code></p>
+</li>
+<li>
+<p>View full trace:</p>
+</li>
+<li>Click on error log</li>
+<li>Navigate to associated trace</li>
+<li>Review span details</li>
+</ol>
+<h3 id="performance-issues">Performance Issues<a class="headerlink" href="#performance-issues" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Identify slow jobs:
+   <code>service:file-job-handler @duration:&gt;60000</code></p>
+</li>
+<li>
+<p>Break down by action:
+   <code>service:file-job-handler "method ended" @duration:*</code></p>
+</li>
+<li>
+<p>Check external dependencies:
+   <code>service:file-job-handler ("Vendor-SFTP" OR "Vendor-FTP") @duration:*</code></p>
+</li>
+</ol>
+<h2 id="log-retention">Log Retention<a class="headerlink" href="#log-retention" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Retention</th>
+<th>Archive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development</td>
+<td>7 days</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Staging</td>
+<td>14 days</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>30 days</td>
+<td>S3 (1 year)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="troubleshooting-runbook.html">Troubleshooting Runbook</a></li>
+<li><a href="../data-models/jobstatus-model.html">JobStatus Model</a></li>
+<li><a href="deployment-guide.html">Deployment Guide</a></li>
+</ul>
 
 
 
@@ -2672,10 +3904,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   

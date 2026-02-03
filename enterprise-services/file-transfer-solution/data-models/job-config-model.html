@@ -5,26 +5,28 @@
       
       
       
-        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/standards/security.html">
+        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/enterprise-services/file-transfer-solution/data-models/job-config-model.html">
       
       
-        <link rel="prev" href="operability.html">
+        <link rel="prev" href="credentials-model.html">
       
+      
+        <link rel="next" href="jobstatus-model.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Security - Architecture Docs</title>
+        <title>Job ConfigModel - Architecture Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -43,15 +45,15 @@
       
     
     
-      <link rel="stylesheet" href="../styles/extra.css">
+      <link rel="stylesheet" href="../../../styles/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -72,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#job-configmodel" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Security
+              Job ConfigModel
             
           </span>
         </div>
@@ -182,7 +189,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -200,7 +207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -274,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/index.html" class="md-nav__link">
         
   
   
@@ -349,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/index.html" class="md-nav__link">
         
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/context.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/context.html" class="md-nav__link">
         
   
   
@@ -405,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/operablity.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/operablity.html" class="md-nav__link">
         
   
   
@@ -433,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/security.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/security.html" class="md-nav__link">
         
   
   
@@ -516,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/eway/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/eway/index.html" class="md-nav__link">
         
   
   
@@ -599,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/print/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/print/index.html" class="md-nav__link">
         
   
   
@@ -639,18 +646,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -671,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -736,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/eai/index.html" class="md-nav__link">
+      <a href="../../eai/index.html" class="md-nav__link">
         
   
   
@@ -769,18 +778,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -801,7 +812,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -866,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/deployment-architecture.html" class="md-nav__link">
+      <a href="../architecture/deployment-architecture.html" class="md-nav__link">
         
   
   
@@ -894,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/event-driven-architecture.html" class="md-nav__link">
+      <a href="../architecture/event-driven-architecture.html" class="md-nav__link">
         
   
   
@@ -922,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/logical-architecture.html" class="md-nav__link">
+      <a href="../architecture/logical-architecture.html" class="md-nav__link">
         
   
   
@@ -950,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/multi-cloud-storage.html" class="md-nav__link">
+      <a href="../architecture/multi-cloud-storage.html" class="md-nav__link">
         
   
   
@@ -978,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/overview.html" class="md-nav__link">
+      <a href="../architecture/overview.html" class="md-nav__link">
         
   
   
@@ -1006,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/physical-architecture.html" class="md-nav__link">
+      <a href="../architecture/physical-architecture.html" class="md-nav__link">
         
   
   
@@ -1034,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/queue-architecture.html" class="md-nav__link">
+      <a href="../architecture/queue-architecture.html" class="md-nav__link">
         
   
   
@@ -1117,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-event-handler.html" class="md-nav__link">
+      <a href="../components/file-event-handler.html" class="md-nav__link">
         
   
   
@@ -1145,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-price-proposal.html" class="md-nav__link">
+      <a href="../components/file-job-handler-price-proposal.html" class="md-nav__link">
         
   
   
@@ -1173,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
         
   
   
@@ -1201,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-route.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-route.html" class="md-nav__link">
         
   
   
@@ -1229,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-status.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-status.html" class="md-nav__link">
         
   
   
@@ -1257,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler.html" class="md-nav__link">
+      <a href="../components/file-job-handler.html" class="md-nav__link">
         
   
   
@@ -1285,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-transfer-common.html" class="md-nav__link">
+      <a href="../components/file-transfer-common.html" class="md-nav__link">
         
   
   
@@ -1318,18 +1329,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
@@ -1350,7 +1363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1368,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/credentials-model.html" class="md-nav__link">
+      <a href="credentials-model.html" class="md-nav__link">
         
   
   
@@ -1393,10 +1406,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/job-config-model.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job ConfigModel
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="job-config-model.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1412,6 +1452,225 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serversattributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ServersAttributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServersAttributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gcp-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCP-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apim-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIM-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Destinations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fireevent-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encryption Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-list-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File List Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1424,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/jobstatus-model.html" class="md-nav__link">
+      <a href="jobstatus-model.html" class="md-nav__link">
         
   
   
@@ -1452,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/notification-model.html" class="md-nav__link">
+      <a href="notification-model.html" class="md-nav__link">
         
   
   
@@ -1480,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/routing-config-model.html" class="md-nav__link">
+      <a href="routing-config-model.html" class="md-nav__link">
         
   
   
@@ -1563,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/action-types.html" class="md-nav__link">
+      <a href="../job-configuration/action-types.html" class="md-nav__link">
         
   
   
@@ -1591,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/jobsettings-storage.html" class="md-nav__link">
+      <a href="../job-configuration/jobsettings-storage.html" class="md-nav__link">
         
   
   
@@ -1619,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/placeholders-reference.html" class="md-nav__link">
+      <a href="../job-configuration/placeholders-reference.html" class="md-nav__link">
         
   
   
@@ -1647,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/source-destination-types.html" class="md-nav__link">
+      <a href="../job-configuration/source-destination-types.html" class="md-nav__link">
         
   
   
@@ -1675,7 +1934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/specification.html" class="md-nav__link">
+      <a href="../job-configuration/specification.html" class="md-nav__link">
         
   
   
@@ -1758,7 +2017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-examples/index.html" class="md-nav__link">
+      <a href="../job-examples/index.html" class="md-nav__link">
         
   
   
@@ -1841,7 +2100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/configuration-management.html" class="md-nav__link">
+      <a href="../operations/configuration-management.html" class="md-nav__link">
         
   
   
@@ -1869,7 +2128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/deployment-guide.html" class="md-nav__link">
+      <a href="../operations/deployment-guide.html" class="md-nav__link">
         
   
   
@@ -1897,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/monitoring-logging.html" class="md-nav__link">
+      <a href="../operations/monitoring-logging.html" class="md-nav__link">
         
   
   
@@ -1925,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/security-secrets.html" class="md-nav__link">
+      <a href="../operations/security-secrets.html" class="md-nav__link">
         
   
   
@@ -1953,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/troubleshooting-runbook.html" class="md-nav__link">
+      <a href="../operations/troubleshooting-runbook.html" class="md-nav__link">
         
   
   
@@ -2044,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/payment-gateway/index.html" class="md-nav__link">
+      <a href="../../payment-gateway/index.html" class="md-nav__link">
         
   
   
@@ -2127,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/pre/index.html" class="md-nav__link">
+      <a href="../../pre/index.html" class="md-nav__link">
         
   
   
@@ -2217,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/nomenclature.html" class="md-nav__link">
+      <a href="../../../governance/nomenclature.html" class="md-nav__link">
         
   
   
@@ -2245,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/principles.html" class="md-nav__link">
+      <a href="../../../governance/principles.html" class="md-nav__link">
         
   
   
@@ -2273,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/raci.html" class="md-nav__link">
+      <a href="../../../governance/raci.html" class="md-nav__link">
         
   
   
@@ -2355,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure/index.html" class="md-nav__link">
+      <a href="../../../infrastructure/index.html" class="md-nav__link">
         
   
   
@@ -2387,20 +2646,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -2421,7 +2678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2439,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-privacy.html" class="md-nav__link">
+      <a href="../../../standards/data-privacy.html" class="md-nav__link">
         
   
   
@@ -2467,7 +2724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integrations.html" class="md-nav__link">
+      <a href="../../../standards/integrations.html" class="md-nav__link">
         
   
   
@@ -2495,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="observability.html" class="md-nav__link">
+      <a href="../../../standards/observability.html" class="md-nav__link">
         
   
   
@@ -2523,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="operability.html" class="md-nav__link">
+      <a href="../../../standards/operability.html" class="md-nav__link">
         
   
   
@@ -2548,17 +2805,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="security.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../standards/security.html" class="md-nav__link">
         
   
   
@@ -2574,7 +2824,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2604,6 +2853,215 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serversattributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ServersAttributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServersAttributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gcp-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCP-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apim-specific-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        APIM-Specific Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Destinations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fireevent-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encryption Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-list-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File List Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2620,9 +3078,683 @@
 
 
 
-  <h1>Security</h1>
-
-
+<h1 id="job-configmodel">Job ConfigModel<a class="headerlink" href="#job-configmodel" title="Permanent link">¶</a></h1>
+<p>The Job ConfigModel defines the structure of job configuration files (<code>jobsettings.json</code>) that specify file transfer operations.</p>
+<h2 id="source-file">Source File<a class="headerlink" href="#source-file" title="Permanent link">¶</a></h2>
+<p><code>FileJobHandler/FileJobHandler.Service/Model/ConfigModel.cs</code></p>
+<h2 id="schema-overview">Schema Overview<a class="headerlink" href="#schema-overview" title="Permanent link">¶</a></h2>
+<pre><code>ConfigModel
+├── feedName: string (required)
+├── version: string
+├── jobsecret: string
+├── source: ServersAttributes
+│   ├── name, type, host, port, path
+│   ├── ssl: bool? (default: false)
+│   ├── endpoint (BlobStore)
+│   ├── bucketName (Google, S3)
+│   ├── GCP fields: servicetype, projectID, privateKeyID, clientEmail,
+│   │   clientID, authUri, tokenUri, authProvider, clientCertUrl, universeDomain
+│   ├── S3 fields: region
+│   ├── APIM fields: TargetUrl, TimeoutMs, RepeatAPI
+│   └── credentials: Credentials
+├── destinations[]: Destinations (extends ServersAttributes)
+│   ├── id: int
+│   └── removeFirstBackSlash: int? (Readnet specific)
+└── actions[]: Actions
+    ├── id, type, sourceFile, outputStream, outputFile
+    ├── keyFile, keypassword, sourceStream, source, target
+    ├── destination: int
+    ├── FireEvent fields: eventType, eventSource, eventSubject, eventAccountId,
+    │   eventId, eventCorrelationId, eventFileName
+    ├── Encryption fields: encryptArmor, encryptIntegirity, encryptSymmetricKey,
+    │   encryptCompressed, encryptFilename, encryptSubkey
+    ├── FileList fields: listFileNames, pathlistFile, startWith, endWith,
+    │   concateWith, numberOfFiles, listConcateFileNames
+    ├── sort: string
+    └── ActualOutPutStream: byte[] (runtime only)
+</code></pre>
+<h2 id="root-properties">Root Properties<a class="headerlink" href="#root-properties" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feedName</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Job/feed identifier</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>string</td>
+<td>No</td>
+<td>Configuration version</td>
+</tr>
+<tr>
+<td><code>jobsecret</code></td>
+<td>string</td>
+<td>No</td>
+<td>Reference to secrets file</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>ServersAttributes</td>
+<td>Yes</td>
+<td>Source server configuration</td>
+</tr>
+<tr>
+<td><code>destinations</code></td>
+<td>Destinations[]</td>
+<td>Yes</td>
+<td>Array of destination configurations</td>
+</tr>
+<tr>
+<td><code>actions</code></td>
+<td>Actions[]</td>
+<td>Yes</td>
+<td>Array of actions to execute</td>
+</tr>
+</tbody>
+</table>
+<h2 id="serversattributes">ServersAttributes<a class="headerlink" href="#serversattributes" title="Permanent link">¶</a></h2>
+<p>Base class for source and destination configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td></td>
+<td>Server display name</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td></td>
+<td>Server type (see <a href="../job-configuration/source-destination-types.html">Source/Destination Types</a>)</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td>string</td>
+<td></td>
+<td>Server hostname</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>string</td>
+<td></td>
+<td>Server port</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>string</td>
+<td></td>
+<td>Base path on server</td>
+</tr>
+<tr>
+<td><code>ssl</code></td>
+<td>bool?</td>
+<td>false</td>
+<td>Enable SSL/TLS</td>
+</tr>
+<tr>
+<td><code>endpoint</code></td>
+<td>string</td>
+<td></td>
+<td>BlobStore endpoint URL</td>
+</tr>
+<tr>
+<td><code>bucketName</code></td>
+<td>string</td>
+<td></td>
+<td>GCP/S3 bucket name</td>
+</tr>
+<tr>
+<td><code>credentials</code></td>
+<td>Credentials</td>
+<td></td>
+<td>Authentication credentials</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gcp-specific-fields">GCP-Specific Fields<a class="headerlink" href="#gcp-specific-fields" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>servicetype</code></td>
+<td>string</td>
+<td>Service type (e.g., "service_account")</td>
+</tr>
+<tr>
+<td><code>projectID</code></td>
+<td>string</td>
+<td>GCP project identifier</td>
+</tr>
+<tr>
+<td><code>privateKeyID</code></td>
+<td>string</td>
+<td>Private key identifier</td>
+</tr>
+<tr>
+<td><code>clientEmail</code></td>
+<td>string</td>
+<td>Service account email</td>
+</tr>
+<tr>
+<td><code>clientID</code></td>
+<td>string</td>
+<td>Client identifier</td>
+</tr>
+<tr>
+<td><code>authUri</code></td>
+<td>string</td>
+<td>OAuth authorization URI</td>
+</tr>
+<tr>
+<td><code>tokenUri</code></td>
+<td>string</td>
+<td>OAuth token URI</td>
+</tr>
+<tr>
+<td><code>authProvider</code></td>
+<td>string</td>
+<td>Auth provider certificate URL</td>
+</tr>
+<tr>
+<td><code>clientCertUrl</code></td>
+<td>string</td>
+<td>Client certificate URL</td>
+</tr>
+<tr>
+<td><code>universeDomain</code></td>
+<td>string</td>
+<td>Universe domain (default: googleapis.com)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="s3-specific-fields">S3-Specific Fields<a class="headerlink" href="#s3-specific-fields" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>region</code></td>
+<td>string</td>
+<td>AWS region (e.g., "us-east-1")</td>
+</tr>
+</tbody>
+</table>
+<h3 id="apim-specific-fields">APIM-Specific Fields<a class="headerlink" href="#apim-specific-fields" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TargetUrl</code></td>
+<td>string</td>
+<td>API endpoint URL</td>
+</tr>
+<tr>
+<td><code>TimeoutMs</code></td>
+<td>string</td>
+<td>Request timeout in milliseconds</td>
+</tr>
+<tr>
+<td><code>RepeatAPI</code></td>
+<td>string</td>
+<td>Number of retry attempts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="destinations">Destinations<a class="headerlink" href="#destinations" title="Permanent link">¶</a></h2>
+<p>Extends ServersAttributes with additional properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Destination identifier (referenced by actions)</td>
+</tr>
+<tr>
+<td><code>removeFirstBackSlash</code></td>
+<td>int?</td>
+<td>Readnet-specific: remove leading backslash</td>
+</tr>
+</tbody>
+</table>
+<h2 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Permanent link">¶</a></h2>
+<p>Authentication configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>Auth type: <code>BasicAuth</code>, <code>SSHKey</code></td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>string</td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>string</td>
+<td>Password</td>
+</tr>
+<tr>
+<td><code>sshkey</code></td>
+<td>string</td>
+<td>SSH key file path</td>
+</tr>
+<tr>
+<td><code>sshkeyValue</code></td>
+<td>string</td>
+<td>SSH key content (inline)</td>
+</tr>
+<tr>
+<td><code>sshkeyContent</code></td>
+<td>string</td>
+<td>SSH key content (alternative)</td>
+</tr>
+<tr>
+<td><code>usernameValue</code></td>
+<td>string</td>
+<td>Username from secrets</td>
+</tr>
+<tr>
+<td><code>passwordValue</code></td>
+<td>string</td>
+<td>Password from secrets</td>
+</tr>
+<tr>
+<td><code>containerName</code></td>
+<td>string</td>
+<td>BlobStore container name</td>
+</tr>
+<tr>
+<td><code>sasToken</code></td>
+<td>string</td>
+<td>SAS token</td>
+</tr>
+<tr>
+<td><code>connectionString</code></td>
+<td>string</td>
+<td>Connection string</td>
+</tr>
+<tr>
+<td><code>shareName</code></td>
+<td>string</td>
+<td>Azure File Share name</td>
+</tr>
+<tr>
+<td><code>OAuthScope</code></td>
+<td>string</td>
+<td>OAuth scope for APIM</td>
+</tr>
+<tr>
+<td><code>privateKey</code></td>
+<td>string</td>
+<td>GCP private key</td>
+</tr>
+<tr>
+<td><code>accessKey</code></td>
+<td>string</td>
+<td>S3 access key</td>
+</tr>
+<tr>
+<td><code>secretKey</code></td>
+<td>string</td>
+<td>S3 secret key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">¶</a></h2>
+<p>Action configuration for job execution.</p>
+<h3 id="common-properties">Common Properties<a class="headerlink" href="#common-properties" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>int</td>
+<td>Action identifier (execution order)</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>Action type (see <a href="../job-configuration/action-types.html">Action Types</a>)</td>
+</tr>
+<tr>
+<td><code>sourceFile</code></td>
+<td>string</td>
+<td>Source file path</td>
+</tr>
+<tr>
+<td><code>sourceStream</code></td>
+<td>string</td>
+<td>Reference to previous action output</td>
+</tr>
+<tr>
+<td><code>outputStream</code></td>
+<td>string</td>
+<td>Output identifier for chaining</td>
+</tr>
+<tr>
+<td><code>outputFile</code></td>
+<td>string</td>
+<td>Output file path</td>
+</tr>
+<tr>
+<td><code>destination</code></td>
+<td>int</td>
+<td>Destination ID for write operations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fireevent-properties">FireEvent Properties<a class="headerlink" href="#fireevent-properties" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eventType</code></td>
+<td>string</td>
+<td>Event type to emit</td>
+</tr>
+<tr>
+<td><code>eventSource</code></td>
+<td>string</td>
+<td>Event source identifier</td>
+</tr>
+<tr>
+<td><code>eventSubject</code></td>
+<td>string</td>
+<td>Event subject</td>
+</tr>
+<tr>
+<td><code>eventAccountId</code></td>
+<td>string</td>
+<td>Target account ID</td>
+</tr>
+<tr>
+<td><code>eventId</code></td>
+<td>string</td>
+<td>Event ID (or auto-generated)</td>
+</tr>
+<tr>
+<td><code>eventCorrelationId</code></td>
+<td>string</td>
+<td>Correlation ID</td>
+</tr>
+<tr>
+<td><code>eventFileName</code></td>
+<td>string</td>
+<td>Filename for event</td>
+</tr>
+</tbody>
+</table>
+<h3 id="encryption-properties">Encryption Properties<a class="headerlink" href="#encryption-properties" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyFile</code></td>
+<td>string</td>
+<td></td>
+<td>Path to encryption key file</td>
+</tr>
+<tr>
+<td><code>keypassword</code></td>
+<td>string</td>
+<td></td>
+<td>Key password (from secrets)</td>
+</tr>
+<tr>
+<td><code>encryptArmor</code></td>
+<td>bool</td>
+<td>true</td>
+<td>ASCII armor output</td>
+</tr>
+<tr>
+<td><code>encryptIntegirity</code></td>
+<td>bool</td>
+<td>true</td>
+<td>Include integrity check</td>
+</tr>
+<tr>
+<td><code>encryptSymmetricKey</code></td>
+<td>string</td>
+<td>"Cast5"</td>
+<td>Symmetric algorithm</td>
+</tr>
+<tr>
+<td><code>encryptCompressed</code></td>
+<td>string</td>
+<td>"Uncompressed"</td>
+<td>Compression algorithm</td>
+</tr>
+<tr>
+<td><code>encryptFilename</code></td>
+<td>string</td>
+<td>""</td>
+<td>Encrypted filename</td>
+</tr>
+<tr>
+<td><code>encryptSubkey</code></td>
+<td>bool</td>
+<td>false</td>
+<td>Use subkey for encryption</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-list-properties">File List Properties<a class="headerlink" href="#file-list-properties" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>listFileNames</code></td>
+<td>List\&lt;string&gt;</td>
+<td></td>
+<td>List of files to process</td>
+</tr>
+<tr>
+<td><code>pathlistFile</code></td>
+<td>string</td>
+<td></td>
+<td>Path to file list</td>
+</tr>
+<tr>
+<td><code>startWith</code></td>
+<td>string</td>
+<td></td>
+<td>Filter: filename starts with</td>
+</tr>
+<tr>
+<td><code>endWith</code></td>
+<td>string</td>
+<td></td>
+<td>Filter: filename ends with</td>
+</tr>
+<tr>
+<td><code>concateWith</code></td>
+<td>string</td>
+<td></td>
+<td>Concatenation delimiter</td>
+</tr>
+<tr>
+<td><code>numberOfFiles</code></td>
+<td>int</td>
+<td>1</td>
+<td>Max files to process</td>
+</tr>
+<tr>
+<td><code>listConcateFileNames</code></td>
+<td>List\&lt;string&gt;</td>
+<td></td>
+<td>Concatenated file list</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>string</td>
+<td></td>
+<td>Sort order for file list</td>
+</tr>
+</tbody>
+</table>
+<h3 id="runtime-properties">Runtime Properties<a class="headerlink" href="#runtime-properties" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActualOutPutStream</code></td>
+<td>byte[]</td>
+<td>Runtime: processed file content (do not serialize)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-configuration">Example Configuration<a class="headerlink" href="#example-configuration" title="Permanent link">¶</a></h2>
+<pre><code class="language-json">{
+  "feedName": "vendor-data-import",
+  "version": "1.0",
+  "source": {
+    "name": "Vendor SFTP",
+    "type": "Vendor-SFTP",
+    "host": "sftp.vendor.com",
+    "port": "22",
+    "path": "/outbound",
+    "credentials": {
+      "type": "BasicAuth",
+      "username": "{@JobSecrets.vendorUser}",
+      "password": "{@JobSecrets.vendorPass}"
+    }
+  },
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Internal Storage",
+      "type": "BlobStore",
+      "endpoint": "https://storage.blob.core.windows.net",
+      "credentials": {
+        "containerName": "imports",
+        "connectionString": "{@JobSecrets.blobConnection}"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "type": "ReadFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    },
+    {
+      "id": 1,
+      "type": "PGP-Decrypt",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}",
+      "keyFile": "{@AppSettings.jobsettingsfolder}/private.key",
+      "keypassword": "{@JobSecrets.pgpPassword}"
+    },
+    {
+      "id": 2,
+      "type": "Scan",
+      "sourceStream": "{@JobSettings.actions.1.outputStream}"
+    },
+    {
+      "id": 3,
+      "type": "WriteFile",
+      "sourceStream": "{@JobSettings.actions.2.outputStream}",
+      "outputFile": "{@JobSettings.destinations.1.path}/processed/{@Message.fileName.name}.csv"
+    },
+    {
+      "id": 4,
+      "type": "DeleteFile",
+      "sourceFile": "{@JobSettings.source.path}/{@Message.fileName}"
+    }
+  ]
+}
+</code></pre>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../job-configuration/specification.html">Job Configuration Specification</a></li>
+<li><a href="../job-configuration/source-destination-types.html">Source/Destination Types</a></li>
+<li><a href="../job-configuration/action-types.html">Action Types</a></li>
+<li><a href="../job-configuration/placeholders-reference.html">Placeholders Reference</a></li>
+<li><a href="credentials-model.html">Credentials Model</a></li>
+</ul>
 
 
 
@@ -2672,10 +3804,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   

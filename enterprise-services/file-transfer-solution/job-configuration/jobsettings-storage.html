@@ -1,0 +1,2072 @@
+<!DOCTYPE html><html class="no-js" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link href="https://vishnu-staples.github.io/architecture-doc-repo/enterprise-services/file-transfer-solution/job-configuration/jobsettings-storage.html" rel="canonical">
+<link href="action-types.html" rel="prev">
+<link href="placeholders-reference.html" rel="next">
+<link href="../../../assets/images/favicon.png" rel="icon">
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator">
+<title>Jobsettings Storage - Architecture Docs</title>
+<link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet">
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../styles/extra.css" rel="stylesheet">
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox">
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox">
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#jobsettings-storage">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Architecture Docs" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="Architecture Docs">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Architecture Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Jobsettings Storage
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text">
+<label class="md-search__icon md-icon" for="__search">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Architecture Docs" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="Architecture Docs">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Architecture Docs
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../index.html">
+<span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox">
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Ecommerce
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Ecommerce
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/index.html">
+<span class="md-ellipsis">
+    
+  
+    System Context
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox">
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Dot ca
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Dot ca
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/dot-ca/index.html">
+<span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/dot-ca/context.html">
+<span class="md-ellipsis">
+    
+  
+    Context
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/dot-ca/operablity.html">
+<span class="md-ellipsis">
+    
+  
+    Operablity
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/dot-ca/security.html">
+<span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox">
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Eway
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Eway
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/eway/index.html">
+<span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox">
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Print
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ecommerce/print/index.html">
+<span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox">
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Enterprise services
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Enterprise services
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox">
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Eai
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Eai
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eai/index.html">
+<span class="md-ellipsis">
+    
+  
+    overview
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    File transfer solution
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    File transfer solution
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_1" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/deployment-architecture.html">
+<span class="md-ellipsis">
+    
+  
+    Deployment Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/event-driven-architecture.html">
+<span class="md-ellipsis">
+    
+  
+    Event-Driven Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/logical-architecture.html">
+<span class="md-ellipsis">
+    
+  
+    Logical architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/multi-cloud-storage.html">
+<span class="md-ellipsis">
+    
+  
+    Multi-Cloud Storage Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/overview.html">
+<span class="md-ellipsis">
+    
+  
+    System Architecture Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/physical-architecture.html">
+<span class="md-ellipsis">
+    
+  
+    Physical architecture
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/queue-architecture.html">
+<span class="md-ellipsis">
+    
+  
+    Queue Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Components
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-event-handler.html">
+<span class="md-ellipsis">
+    
+  
+    FileEventHandler
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-job-handler-price-proposal.html">
+<span class="md-ellipsis">
+    
+  
+    FileJobHandler-PriceProposal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-job-handler-tms-carrier-pod.html">
+<span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSCarrierPOD
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-job-handler-tms-route.html">
+<span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSRoute
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-job-handler-tms-status.html">
+<span class="md-ellipsis">
+    
+  
+    FileJobHandler-TMSStatus
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-job-handler.html">
+<span class="md-ellipsis">
+    
+  
+    FileJobHandler
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../components/file-transfer-common.html">
+<span class="md-ellipsis">
+    
+  
+    FileTransferCommon
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Data models
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Data models
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-models/credentials-model.html">
+<span class="md-ellipsis">
+    
+  
+    Credentials Model
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-models/job-config-model.html">
+<span class="md-ellipsis">
+    
+  
+    Job ConfigModel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-models/jobstatus-model.html">
+<span class="md-ellipsis">
+    
+  
+    JobStatus Model
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-models/notification-model.html">
+<span class="md-ellipsis">
+    
+  
+    Notification Model
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data-models/routing-config-model.html">
+<span class="md-ellipsis">
+    
+  
+    Routing ConfigModel
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_4" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Job configuration
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Job configuration
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="action-types.html">
+<span class="md-ellipsis">
+    
+  
+    Action Types
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox">
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Jobsettings Storage
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="jobsettings-storage.html">
+<span class="md-ellipsis">
+    
+  
+    Jobsettings Storage
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storage-location">
+<span class="md-ellipsis">
+      
+        Storage Location
+      
+    </span>
+</a>
+<nav aria-label="Storage Location" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-components">
+<span class="md-ellipsis">
+      
+        Directory Components
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-paths">
+<span class="md-ellipsis">
+      
+        Example Paths
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-structure">
+<span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+</a>
+<nav aria-label="File Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsettingsjson">
+<span class="md-ellipsis">
+      
+        jobsettings.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsecretsjson">
+<span class="md-ellipsis">
+      
+        jobsecrets.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-files">
+<span class="md-ellipsis">
+      
+        Key Files
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-resolution-flow">
+<span class="md-ellipsis">
+      
+        Configuration Resolution Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#folder-search-behavior">
+<span class="md-ellipsis">
+      
+        Folder Search Behavior
+      
+    </span>
+</a>
+<nav aria-label="Folder Search Behavior" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#search-example">
+<span class="md-ellipsis">
+      
+        Search Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-case">
+<span class="md-ellipsis">
+      
+        Use Case
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsecrets-resolution">
+<span class="md-ellipsis">
+      
+        JobSecrets Resolution
+      
+    </span>
+</a>
+<nav aria-label="JobSecrets Resolution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placeholder-pattern">
+<span class="md-ellipsis">
+      
+        Placeholder Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resolution-process">
+<span class="md-ellipsis">
+      
+        Resolution Process
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-appsettingsjson">
+<span class="md-ellipsis">
+      
+        Configuration (appsettings.json)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#path-placeholder-resolution">
+<span class="md-ellipsis">
+      
+        Path Placeholder Resolution
+      
+    </span>
+</a>
+<nav aria-label="Path Placeholder Resolution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#appsettingsjson">
+<span class="md-ellipsis">
+      
+        appsettings.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resolution-example">
+<span class="md-ellipsis">
+      
+        Resolution Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-organization-patterns">
+<span class="md-ellipsis">
+      
+        Directory Organization Patterns
+      
+    </span>
+</a>
+<nav aria-label="Directory Organization Patterns" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-feed-pattern">
+<span class="md-ellipsis">
+      
+        Per-Feed Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-configuration-pattern">
+<span class="md-ellipsis">
+      
+        Shared Configuration Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-specific-keys">
+<span class="md-ellipsis">
+      
+        Environment-Specific Keys
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+</a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-not-found">
+<span class="md-ellipsis">
+      
+        Config Not Found
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secrets-not-resolved">
+<span class="md-ellipsis">
+      
+        Secrets Not Resolved
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-file-not-found">
+<span class="md-ellipsis">
+      
+        Key File Not Found
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="placeholders-reference.html">
+<span class="md-ellipsis">
+    
+  
+    Placeholders Reference
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="source-destination-types.html">
+<span class="md-ellipsis">
+    
+  
+    Source/Destination Types
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="specification.html">
+<span class="md-ellipsis">
+    
+  
+    Job Configuration Specification
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_5" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Job examples
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Job examples
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../job-examples/index.html">
+<span class="md-ellipsis">
+    
+  
+    Job Examples
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_6" type="checkbox">
+<label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../operations/configuration-management.html">
+<span class="md-ellipsis">
+    
+  
+    Configuration Management
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../operations/deployment-guide.html">
+<span class="md-ellipsis">
+    
+  
+    Deployment Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../operations/monitoring-logging.html">
+<span class="md-ellipsis">
+    
+  
+    Monitoring &amp; Logging
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../operations/security-secrets.html">
+<span class="md-ellipsis">
+    
+  
+    Security &amp; Secrets Management
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../operations/troubleshooting-runbook.html">
+<span class="md-ellipsis">
+    
+  
+    Troubleshooting Runbook
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox">
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Payment gateway
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Payment gateway
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../payment-gateway/index.html">
+<span class="md-ellipsis">
+    
+  
+    overview
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox">
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Pre
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Pre
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pre/index.html">
+<span class="md-ellipsis">
+    
+  
+    overview
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox">
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Governance
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/nomenclature.html">
+<span class="md-ellipsis">
+    
+  
+    Nomenclature
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/principles.html">
+<span class="md-ellipsis">
+    
+  
+    Principles
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/raci.html">
+<span class="md-ellipsis">
+    
+  
+    RACI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox">
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Infrastructure
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../infrastructure/index.html">
+<span class="md-ellipsis">
+    
+  
+    Physical Architecture
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox">
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Standards
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Standards
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../standards/data-privacy.html">
+<span class="md-ellipsis">
+    
+  
+    Data privacy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../standards/integrations.html">
+<span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../standards/observability.html">
+<span class="md-ellipsis">
+    
+  
+    Observability
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../standards/operability.html">
+<span class="md-ellipsis">
+    
+  
+    Operability
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../standards/security.html">
+<span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storage-location">
+<span class="md-ellipsis">
+      
+        Storage Location
+      
+    </span>
+</a>
+<nav aria-label="Storage Location" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-components">
+<span class="md-ellipsis">
+      
+        Directory Components
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-paths">
+<span class="md-ellipsis">
+      
+        Example Paths
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-structure">
+<span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+</a>
+<nav aria-label="File Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsettingsjson">
+<span class="md-ellipsis">
+      
+        jobsettings.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsecretsjson">
+<span class="md-ellipsis">
+      
+        jobsecrets.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-files">
+<span class="md-ellipsis">
+      
+        Key Files
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-resolution-flow">
+<span class="md-ellipsis">
+      
+        Configuration Resolution Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#folder-search-behavior">
+<span class="md-ellipsis">
+      
+        Folder Search Behavior
+      
+    </span>
+</a>
+<nav aria-label="Folder Search Behavior" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#search-example">
+<span class="md-ellipsis">
+      
+        Search Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#use-case">
+<span class="md-ellipsis">
+      
+        Use Case
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jobsecrets-resolution">
+<span class="md-ellipsis">
+      
+        JobSecrets Resolution
+      
+    </span>
+</a>
+<nav aria-label="JobSecrets Resolution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placeholder-pattern">
+<span class="md-ellipsis">
+      
+        Placeholder Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resolution-process">
+<span class="md-ellipsis">
+      
+        Resolution Process
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-appsettingsjson">
+<span class="md-ellipsis">
+      
+        Configuration (appsettings.json)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#path-placeholder-resolution">
+<span class="md-ellipsis">
+      
+        Path Placeholder Resolution
+      
+    </span>
+</a>
+<nav aria-label="Path Placeholder Resolution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#appsettingsjson">
+<span class="md-ellipsis">
+      
+        appsettings.json
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resolution-example">
+<span class="md-ellipsis">
+      
+        Resolution Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directory-organization-patterns">
+<span class="md-ellipsis">
+      
+        Directory Organization Patterns
+      
+    </span>
+</a>
+<nav aria-label="Directory Organization Patterns" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-feed-pattern">
+<span class="md-ellipsis">
+      
+        Per-Feed Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shared-configuration-pattern">
+<span class="md-ellipsis">
+      
+        Shared Configuration Pattern
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environment-specific-keys">
+<span class="md-ellipsis">
+      
+        Environment-Specific Keys
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+</a>
+<nav aria-label="Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#config-not-found">
+<span class="md-ellipsis">
+      
+        Config Not Found
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secrets-not-resolved">
+<span class="md-ellipsis">
+      
+        Secrets Not Resolved
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-file-not-found">
+<span class="md-ellipsis">
+      
+        Key File Not Found
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="jobsettings-storage">Jobsettings Storage<a class="headerlink" href="#jobsettings-storage" title="Permanent link">¶</a></h1>
+<p>This document describes how job configuration files are stored, located, and resolved at runtime.</p>
+<h2 id="storage-location">Storage Location<a class="headerlink" href="#storage-location" title="Permanent link">¶</a></h2>
+<p>Job configurations are stored on an Azure File Share mounted at:</p>
+<pre><code>/mnt/jobconfig/{source}/{accountID}/{fileName.subFolder}/
+</code></pre>
+<h3 id="directory-components">Directory Components<a class="headerlink" href="#directory-components" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Source</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/mnt/jobconfig</code></td>
+<td>Fixed mount point</td>
+<td></td>
+</tr>
+<tr>
+<td><code>{source}</code></td>
+<td><code>{@Message.source}</code> from event</td>
+<td><code>FTP.File.ExternalService</code></td>
+</tr>
+<tr>
+<td><code>{accountID}</code></td>
+<td><code>{@Message.accountID}</code> from event</td>
+<td><code>ACCOUNT001</code></td>
+</tr>
+<tr>
+<td><code>{fileName.subFolder}</code></td>
+<td>Derived from <code>{@Message.fileName}</code></td>
+<td><code>incoming</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-paths">Example Paths<a class="headerlink" href="#example-paths" title="Permanent link">¶</a></h3>
+<p>For event:</p>
+<pre><code class="language-json">{
+  "source": "FTP.File.ExternalService",
+  "data": {
+    "accountId": "VENDOR001",
+    "fileName": "incoming/reports/daily.csv"
+  }
+}
+</code></pre>
+<p>Configuration path:</p>
+<pre><code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/incoming/reports/
+├── jobsettings.json
+└── jobsecrets.json
+</code></pre>
+<h2 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">¶</a></h2>
+<h3 id="jobsettingsjson">jobsettings.json<a class="headerlink" href="#jobsettingsjson" title="Permanent link">¶</a></h3>
+<p>Main job configuration file containing:
+- Source server configuration
+- Destination server configurations
+- Action sequence</p>
+<p>See <a href="../data-models/job-config-model.html">Job ConfigModel</a> for schema.</p>
+<h3 id="jobsecretsjson">jobsecrets.json<a class="headerlink" href="#jobsecretsjson" title="Permanent link">¶</a></h3>
+<p>Sensitive credentials stored separately:</p>
+<pre><code class="language-json">{
+  "vendorUser": "actual-username",
+  "vendorPass": "actual-password",
+  "pgpPassword": "key-passphrase",
+  "blobConnection": "DefaultEndpointsProtocol=https;..."
+}
+</code></pre>
+<h3 id="key-files">Key Files<a class="headerlink" href="#key-files" title="Permanent link">¶</a></h3>
+<p>Encryption keys stored in same directory:</p>
+<pre><code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/incoming/
+├── jobsettings.json
+├── jobsecrets.json
+├── private.key          # PGP private key
+├── public.key           # PGP public key
+└── id_rsa               # SSH private key
+</code></pre>
+<h2 id="configuration-resolution-flow">Configuration Resolution Flow<a class="headerlink" href="#configuration-resolution-flow" title="Permanent link">¶</a></h2>
+<div class="mermaid">flowchart TD
+    A[Incoming Event] --&gt; B[Extract Message Fields]
+    B --&gt; C[Build jobsettingsfolder Path]
+    C --&gt; D{jobsettings.json exists?}
+
+    D --&gt;|Yes| E[Load jobsettings.json]
+    D --&gt;|No| F[Search Parent Folders]
+
+    F --&gt; G{Found in parent?}
+    G --&gt;|Yes| E
+    G --&gt;|No| H[Job Failed: Config Not Found]
+
+    E --&gt; I{Has JobSecrets placeholders?}
+    I --&gt;|Yes| J[Load jobsecrets.json]
+    I --&gt;|No| K[Continue]
+
+    J --&gt; L{jobsecrets.json exists?}
+    L --&gt;|Yes| M[Resolve Placeholders]
+    L --&gt;|No| N{KeyVault enabled?}
+
+    N --&gt;|Yes| O[Fetch from KeyVault]
+    N --&gt;|No| P[Job Failed: Secrets Not Found]
+
+    O --&gt; M
+    M --&gt; K
+
+    K --&gt; Q[Execute Job]
+</div>
+<h2 id="folder-search-behavior">Folder Search Behavior<a class="headerlink" href="#folder-search-behavior" title="Permanent link">¶</a></h2>
+<p>If <code>jobsettings.json</code> is not found in the expected path, the system searches parent folders upward.</p>
+<h3 id="search-example">Search Example<a class="headerlink" href="#search-example" title="Permanent link">¶</a></h3>
+<p>For path <code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/data/reports/</code>:</p>
+<ol>
+<li>Check: <code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/data/reports/jobsettings.json</code></li>
+<li>Check: <code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/data/jobsettings.json</code></li>
+<li>Check: <code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/jobsettings.json</code></li>
+<li>Stop at account root</li>
+</ol>
+<h3 id="use-case">Use Case<a class="headerlink" href="#use-case" title="Permanent link">¶</a></h3>
+<p>A single configuration can handle multiple subfolders:</p>
+<pre><code>/mnt/jobconfig/source/ACCOUNT001/
+├── jobsettings.json       # Handles all subfolders
+├── jobsecrets.json
+├── incoming/
+│   ├── data/              # Uses parent jobsettings.json
+│   └── reports/           # Uses parent jobsettings.json
+└── archive/               # Uses parent jobsettings.json
+</code></pre>
+<h2 id="jobsecrets-resolution">JobSecrets Resolution<a class="headerlink" href="#jobsecrets-resolution" title="Permanent link">¶</a></h2>
+<h3 id="placeholder-pattern">Placeholder Pattern<a class="headerlink" href="#placeholder-pattern" title="Permanent link">¶</a></h3>
+<pre><code>{@JobSecrets.([a-zA-Z0-9]*)}
+</code></pre>
+<h3 id="resolution-process">Resolution Process<a class="headerlink" href="#resolution-process" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>File-based</strong> (Primary):</li>
+<li>Load <code>jobsecrets.json</code> from same folder as <code>jobsettings.json</code></li>
+<li>
+<p>Match placeholder key to JSON property</p>
+</li>
+<li>
+<p><strong>KeyVault-based</strong> (Fallback):</p>
+</li>
+<li>If file not found and KeyVault enabled</li>
+<li>Fetch secret from Azure Key Vault</li>
+<li>Secret name derived from placeholder key</li>
+</ol>
+<h3 id="configuration-appsettingsjson">Configuration (appsettings.json)<a class="headerlink" href="#configuration-appsettingsjson" title="Permanent link">¶</a></h3>
+<pre><code class="language-json">{
+  "KeyVaultSecrets": {
+    "Enable": true,
+    "Uri": "https://fts-{env}-key-vault.vault.azure.net/",
+    "TanentID": "tenant-guid"
+  }
+}
+</code></pre>
+<h2 id="path-placeholder-resolution">Path Placeholder Resolution<a class="headerlink" href="#path-placeholder-resolution" title="Permanent link">¶</a></h2>
+<p>The <code>jobsettingsfolder</code> path is built from message fields:</p>
+<h3 id="appsettingsjson">appsettings.json<a class="headerlink" href="#appsettingsjson" title="Permanent link">¶</a></h3>
+<pre><code class="language-json">{
+  "AzureFiles": {
+    "jobsettingsfolder": "/mnt/jobconfig/{@Message.source}/{@Message.accountID}/{@Message.fileName.subFolder}",
+    "jobsettingsfile": "{@AppSettings.jobsettingsfolder}/jobsettings.json",
+    "jobsecretsfile": "{@AppSettings.jobsettingsfolder}/jobsecrets.json"
+  }
+}
+</code></pre>
+<h3 id="resolution-example">Resolution Example<a class="headerlink" href="#resolution-example" title="Permanent link">¶</a></h3>
+<p>Event:</p>
+<pre><code class="language-json">{
+  "source": "TMS.Route",
+  "data": {
+    "accountId": "TRANSPORT001",
+    "fileName": "routes/daily/route_file.xml"
+  }
+}
+</code></pre>
+<p>Resolution:
+1. <code>{@Message.source}</code> → <code>TMS.Route</code>
+2. <code>{@Message.accountID}</code> → <code>TRANSPORT001</code>
+3. <code>{@Message.fileName.subFolder}</code> → <code>routes/daily</code>
+4. Result: <code>/mnt/jobconfig/TMS.Route/TRANSPORT001/routes/daily/</code></p>
+<h2 id="directory-organization-patterns">Directory Organization Patterns<a class="headerlink" href="#directory-organization-patterns" title="Permanent link">¶</a></h2>
+<h3 id="per-feed-pattern">Per-Feed Pattern<a class="headerlink" href="#per-feed-pattern" title="Permanent link">¶</a></h3>
+<p>Each data feed has its own configuration:</p>
+<pre><code>/mnt/jobconfig/
+├── FTP.File.ExternalService/
+│   ├── VENDOR001/
+│   │   ├── invoices/
+│   │   │   ├── jobsettings.json
+│   │   │   └── jobsecrets.json
+│   │   └── orders/
+│   │       ├── jobsettings.json
+│   │       └── jobsecrets.json
+│   └── VENDOR002/
+│       └── ...
+└── TMS.Route/
+    └── TRANSPORT001/
+        └── ...
+</code></pre>
+<h3 id="shared-configuration-pattern">Shared Configuration Pattern<a class="headerlink" href="#shared-configuration-pattern" title="Permanent link">¶</a></h3>
+<p>Account shares configuration across subfolders:</p>
+<pre><code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/
+├── jobsettings.json         # Shared by all subfolders
+├── jobsecrets.json
+├── private.key
+├── invoices/                # Uses parent config
+├── orders/                  # Uses parent config
+└── reports/                 # Uses parent config
+</code></pre>
+<h3 id="environment-specific-keys">Environment-Specific Keys<a class="headerlink" href="#environment-specific-keys" title="Permanent link">¶</a></h3>
+<p>Different keys per subfolder:</p>
+<pre><code>/mnt/jobconfig/FTP.File.ExternalService/VENDOR001/
+├── jobsettings.json         # Shared config
+├── jobsecrets.json          # Shared secrets
+├── incoming/
+│   ├── decrypt_private.key  # Decrypt key for incoming
+│   └── ...
+└── outgoing/
+    ├── encrypt_public.key   # Encrypt key for outgoing
+    └── ...
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
+<h3 id="config-not-found">Config Not Found<a class="headerlink" href="#config-not-found" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: <code>Could not find jobsettings.json</code></p>
+<p><strong>Causes</strong>:
+1. Event source doesn't match folder structure
+2. Account ID mismatch
+3. Subfolder path extraction issue</p>
+<p><strong>Resolution</strong>:
+1. Verify event fields: <code>source</code>, <code>accountId</code>, <code>fileName</code>
+2. Check folder exists at expected path
+3. Ensure file permissions allow read access</p>
+<h3 id="secrets-not-resolved">Secrets Not Resolved<a class="headerlink" href="#secrets-not-resolved" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: Placeholder appears in credentials</p>
+<p><strong>Causes</strong>:
+1. <code>jobsecrets.json</code> missing
+2. Key not in secrets file
+3. KeyVault not configured/accessible</p>
+<p><strong>Resolution</strong>:
+1. Verify <code>jobsecrets.json</code> exists alongside <code>jobsettings.json</code>
+2. Check key name matches placeholder exactly
+3. Verify KeyVault configuration and access</p>
+<h3 id="key-file-not-found">Key File Not Found<a class="headerlink" href="#key-file-not-found" title="Permanent link">¶</a></h3>
+<p><strong>Error</strong>: <code>Key/Vault Private key not found</code></p>
+<p><strong>Causes</strong>:
+1. Key file path incorrect
+2. File doesn't exist at path
+3. File permissions issue</p>
+<p><strong>Resolution</strong>:
+1. Use <code>{@AppSettings.jobsettingsfolder}</code> for relative paths
+2. Verify file exists in configuration folder
+3. Check file permissions</p>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Organize by Account</strong>: Keep all account configurations together</li>
+<li><strong>Use Shared Configs</strong>: Share common configurations via parent folders</li>
+<li><strong>Separate Secrets</strong>: Always use <code>jobsecrets.json</code> for credentials</li>
+<li><strong>Version Control</strong>: Track configuration changes outside of Azure Files</li>
+<li><strong>Naming Convention</strong>: Use descriptive folder names matching event sources</li>
+</ol>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../data-models/job-config-model.html">Job ConfigModel</a></li>
+<li><a href="placeholders-reference.html">Placeholders Reference</a></li>
+<li><a href="../operations/security-secrets.html">Security &amp; Secrets</a></li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -5,26 +5,28 @@
       
       
       
-        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/standards/security.html">
+        <link rel="canonical" href="https://vishnu-staples.github.io/architecture-doc-repo/enterprise-services/file-transfer-solution/data-models/notification-model.html">
       
       
-        <link rel="prev" href="operability.html">
+        <link rel="prev" href="jobstatus-model.html">
       
+      
+        <link rel="next" href="routing-config-model.html">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Security - Architecture Docs</title>
+        <title>Notification Model - Architecture Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -43,15 +45,15 @@
       
     
     
-      <link rel="stylesheet" href="../styles/extra.css">
+      <link rel="stylesheet" href="../../../styles/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -72,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#notification-model" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-header__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Security
+              Notification Model
             
           </span>
         </div>
@@ -182,7 +189,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
+    <a href="../../../index.html" title="Architecture Docs" class="md-nav__button md-logo" aria-label="Architecture Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -200,7 +207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   
@@ -274,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/index.html" class="md-nav__link">
         
   
   
@@ -349,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/index.html" class="md-nav__link">
         
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/context.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/context.html" class="md-nav__link">
         
   
   
@@ -405,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/operablity.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/operablity.html" class="md-nav__link">
         
   
   
@@ -433,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/dot-ca/security.html" class="md-nav__link">
+      <a href="../../../ecommerce/dot-ca/security.html" class="md-nav__link">
         
   
   
@@ -516,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/eway/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/eway/index.html" class="md-nav__link">
         
   
   
@@ -599,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecommerce/print/index.html" class="md-nav__link">
+      <a href="../../../ecommerce/print/index.html" class="md-nav__link">
         
   
   
@@ -639,18 +646,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -671,7 +680,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -736,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/eai/index.html" class="md-nav__link">
+      <a href="../../eai/index.html" class="md-nav__link">
         
   
   
@@ -769,18 +778,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -801,7 +812,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -866,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/deployment-architecture.html" class="md-nav__link">
+      <a href="../architecture/deployment-architecture.html" class="md-nav__link">
         
   
   
@@ -894,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/event-driven-architecture.html" class="md-nav__link">
+      <a href="../architecture/event-driven-architecture.html" class="md-nav__link">
         
   
   
@@ -922,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/logical-architecture.html" class="md-nav__link">
+      <a href="../architecture/logical-architecture.html" class="md-nav__link">
         
   
   
@@ -950,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/multi-cloud-storage.html" class="md-nav__link">
+      <a href="../architecture/multi-cloud-storage.html" class="md-nav__link">
         
   
   
@@ -978,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/overview.html" class="md-nav__link">
+      <a href="../architecture/overview.html" class="md-nav__link">
         
   
   
@@ -1006,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/physical-architecture.html" class="md-nav__link">
+      <a href="../architecture/physical-architecture.html" class="md-nav__link">
         
   
   
@@ -1034,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/architecture/queue-architecture.html" class="md-nav__link">
+      <a href="../architecture/queue-architecture.html" class="md-nav__link">
         
   
   
@@ -1117,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-event-handler.html" class="md-nav__link">
+      <a href="../components/file-event-handler.html" class="md-nav__link">
         
   
   
@@ -1145,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-price-proposal.html" class="md-nav__link">
+      <a href="../components/file-job-handler-price-proposal.html" class="md-nav__link">
         
   
   
@@ -1173,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-carrier-pod.html" class="md-nav__link">
         
   
   
@@ -1201,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-route.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-route.html" class="md-nav__link">
         
   
   
@@ -1229,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler-tms-status.html" class="md-nav__link">
+      <a href="../components/file-job-handler-tms-status.html" class="md-nav__link">
         
   
   
@@ -1257,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-job-handler.html" class="md-nav__link">
+      <a href="../components/file-job-handler.html" class="md-nav__link">
         
   
   
@@ -1285,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/components/file-transfer-common.html" class="md-nav__link">
+      <a href="../components/file-transfer-common.html" class="md-nav__link">
         
   
   
@@ -1318,18 +1329,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
@@ -1350,7 +1363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1368,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/credentials-model.html" class="md-nav__link">
+      <a href="credentials-model.html" class="md-nav__link">
         
   
   
@@ -1396,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/job-config-model.html" class="md-nav__link">
+      <a href="job-config-model.html" class="md-nav__link">
         
   
   
@@ -1424,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/jobstatus-model.html" class="md-nav__link">
+      <a href="jobstatus-model.html" class="md-nav__link">
         
   
   
@@ -1449,10 +1462,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/notification-model.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notification Model
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="notification-model.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1468,6 +1508,231 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification (Root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datainfo-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DataInfo (Payload)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Serialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-event-file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Event (File Upload)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Event
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fireevent-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values-from-appsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Values (from appsettings)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deserializing-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deserializing Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-name-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Name Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1480,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/data-models/routing-config-model.html" class="md-nav__link">
+      <a href="routing-config-model.html" class="md-nav__link">
         
   
   
@@ -1563,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/action-types.html" class="md-nav__link">
+      <a href="../job-configuration/action-types.html" class="md-nav__link">
         
   
   
@@ -1591,7 +1856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/jobsettings-storage.html" class="md-nav__link">
+      <a href="../job-configuration/jobsettings-storage.html" class="md-nav__link">
         
   
   
@@ -1619,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/placeholders-reference.html" class="md-nav__link">
+      <a href="../job-configuration/placeholders-reference.html" class="md-nav__link">
         
   
   
@@ -1647,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/source-destination-types.html" class="md-nav__link">
+      <a href="../job-configuration/source-destination-types.html" class="md-nav__link">
         
   
   
@@ -1675,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-configuration/specification.html" class="md-nav__link">
+      <a href="../job-configuration/specification.html" class="md-nav__link">
         
   
   
@@ -1758,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/job-examples/index.html" class="md-nav__link">
+      <a href="../job-examples/index.html" class="md-nav__link">
         
   
   
@@ -1841,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/configuration-management.html" class="md-nav__link">
+      <a href="../operations/configuration-management.html" class="md-nav__link">
         
   
   
@@ -1869,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/deployment-guide.html" class="md-nav__link">
+      <a href="../operations/deployment-guide.html" class="md-nav__link">
         
   
   
@@ -1897,7 +2162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/monitoring-logging.html" class="md-nav__link">
+      <a href="../operations/monitoring-logging.html" class="md-nav__link">
         
   
   
@@ -1925,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/security-secrets.html" class="md-nav__link">
+      <a href="../operations/security-secrets.html" class="md-nav__link">
         
   
   
@@ -1953,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/file-transfer-solution/operations/troubleshooting-runbook.html" class="md-nav__link">
+      <a href="../operations/troubleshooting-runbook.html" class="md-nav__link">
         
   
   
@@ -2044,7 +2309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/payment-gateway/index.html" class="md-nav__link">
+      <a href="../../payment-gateway/index.html" class="md-nav__link">
         
   
   
@@ -2127,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enterprise-services/pre/index.html" class="md-nav__link">
+      <a href="../../pre/index.html" class="md-nav__link">
         
   
   
@@ -2217,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/nomenclature.html" class="md-nav__link">
+      <a href="../../../governance/nomenclature.html" class="md-nav__link">
         
   
   
@@ -2245,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/principles.html" class="md-nav__link">
+      <a href="../../../governance/principles.html" class="md-nav__link">
         
   
   
@@ -2273,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../governance/raci.html" class="md-nav__link">
+      <a href="../../../governance/raci.html" class="md-nav__link">
         
   
   
@@ -2355,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure/index.html" class="md-nav__link">
+      <a href="../../../infrastructure/index.html" class="md-nav__link">
         
   
   
@@ -2387,20 +2652,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -2421,7 +2684,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2439,7 +2702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data-privacy.html" class="md-nav__link">
+      <a href="../../../standards/data-privacy.html" class="md-nav__link">
         
   
   
@@ -2467,7 +2730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integrations.html" class="md-nav__link">
+      <a href="../../../standards/integrations.html" class="md-nav__link">
         
   
   
@@ -2495,7 +2758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="observability.html" class="md-nav__link">
+      <a href="../../../standards/observability.html" class="md-nav__link">
         
   
   
@@ -2523,7 +2786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="operability.html" class="md-nav__link">
+      <a href="../../../standards/operability.html" class="md-nav__link">
         
   
   
@@ -2548,17 +2811,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="security.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../standards/security.html" class="md-nav__link">
         
   
   
@@ -2574,7 +2830,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2604,6 +2859,221 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification (Root)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datainfo-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DataInfo (Payload)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Serialization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Messages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success-event-file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Event (File Upload)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Event
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fireevent-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FireEvent Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values-from-appsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Values (from appsettings)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deserializing-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deserializing Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-name-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Name Mapping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2620,9 +3090,361 @@
 
 
 
-  <h1>Security</h1>
+<h1 id="notification-model">Notification Model<a class="headerlink" href="#notification-model" title="Permanent link">¶</a></h1>
+<p>The Notification model represents CloudEvents messages used throughout the FTS platform for event communication.</p>
+<h2 id="source-file">Source File<a class="headerlink" href="#source-file" title="Permanent link">¶</a></h2>
+<p><code>FileTransferCommon/FileTransferCommon/Model/Notification.cs</code></p>
+<h2 id="schema">Schema<a class="headerlink" href="#schema" title="Permanent link">¶</a></h2>
+<pre><code class="language-csharp">public class Notification
+{
+    public string specversion { get; set; }
+    public string type { get; set; }
+    public string source { get; set; }
+    public string subject { get; set; }
+    public string id { get; set; }
+    public string time { get; set; }
+    public string dataschema { get; set; }
+    public DataInfo data { get; set; }
+}
 
-
+public class DataInfo
+{
+    public string correlationId { get; set; }
+    public string instanceId { get; set; }
+    public string clientIpAddress { get; set; }
+    public string accountId { get; set; }
+    public string errorCode { get; set; }
+    public string errorTitle { get; set; }
+    public string errorMsg { get; set; }
+    public string fileName { get; set; }
+    public string targetFileName { get; set; }
+    public long fileSize { get; set; }
+    public string sourceFileName { get; set; }
+    public List&lt;string&gt; parameters { get; set; }
+}
+</code></pre>
+<h2 id="field-descriptions">Field Descriptions<a class="headerlink" href="#field-descriptions" title="Permanent link">¶</a></h2>
+<h3 id="notification-root">Notification (Root)<a class="headerlink" href="#notification-root" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>specversion</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>CloudEvents specification version (always <code>"1.0"</code>)</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Event type (e.g., <code>"Succeeded"</code>, <code>"Error"</code>)</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Event source identifier (e.g., <code>"FTP.File.ExternalService"</code>)</td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Event subject/category (e.g., <code>"File Upload"</code>)</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Unique event identifier (UUID)</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>ISO 8601 timestamp (<code>"2024-01-15T10:30:00+0000"</code>)</td>
+</tr>
+<tr>
+<td><code>dataschema</code></td>
+<td>string</td>
+<td>No</td>
+<td>Data schema version (typically <code>"1.0"</code>)</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>DataInfo</td>
+<td>Yes</td>
+<td>Event payload</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datainfo-payload">DataInfo (Payload)<a class="headerlink" href="#datainfo-payload" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>correlationId</code></td>
+<td>string</td>
+<td>No</td>
+<td>Correlation ID for request tracing</td>
+</tr>
+<tr>
+<td><code>instanceId</code></td>
+<td>string</td>
+<td>No</td>
+<td>Processing instance identifier</td>
+</tr>
+<tr>
+<td><code>clientIpAddress</code></td>
+<td>string</td>
+<td>No</td>
+<td>Client IP address</td>
+</tr>
+<tr>
+<td><code>accountId</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Account identifier for routing</td>
+</tr>
+<tr>
+<td><code>errorCode</code></td>
+<td>string</td>
+<td>No</td>
+<td>Error code (for error events)</td>
+</tr>
+<tr>
+<td><code>errorTitle</code></td>
+<td>string</td>
+<td>No</td>
+<td>Error title</td>
+</tr>
+<tr>
+<td><code>errorMsg</code></td>
+<td>string</td>
+<td>No</td>
+<td>Detailed error message</td>
+</tr>
+<tr>
+<td><code>fileName</code></td>
+<td>string</td>
+<td>No</td>
+<td>Source file path</td>
+</tr>
+<tr>
+<td><code>targetFileName</code></td>
+<td>string</td>
+<td>No</td>
+<td>Target/destination file path</td>
+</tr>
+<tr>
+<td><code>fileSize</code></td>
+<td>long</td>
+<td>No</td>
+<td>File size in bytes</td>
+</tr>
+<tr>
+<td><code>sourceFileName</code></td>
+<td>string</td>
+<td>No</td>
+<td>Original source filename</td>
+</tr>
+<tr>
+<td><code>parameters</code></td>
+<td>List\&lt;string&gt;</td>
+<td>No</td>
+<td>Additional parameters</td>
+</tr>
+</tbody>
+</table>
+<h2 id="json-serialization">JSON Serialization<a class="headerlink" href="#json-serialization" title="Permanent link">¶</a></h2>
+<p>Fields with null values are omitted from JSON output:</p>
+<pre><code class="language-csharp">[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+public string correlationId { get; set; }
+</code></pre>
+<h2 id="example-messages">Example Messages<a class="headerlink" href="#example-messages" title="Permanent link">¶</a></h2>
+<h3 id="success-event-file-upload">Success Event (File Upload)<a class="headerlink" href="#success-event-file-upload" title="Permanent link">¶</a></h3>
+<pre><code class="language-json">{
+  "specversion": "1.0",
+  "type": "Succeeded",
+  "source": "FTP.File.ExternalService",
+  "subject": "File Upload",
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "time": "2024-01-15T10:30:00+0000",
+  "dataschema": "1.0",
+  "data": {
+    "correlationId": "corr-123456",
+    "accountId": "ACCOUNT001",
+    "fileName": "incoming/data.csv",
+    "targetFileName": "processed/data.csv",
+    "fileSize": 1048576
+  }
+}
+</code></pre>
+<h3 id="error-event">Error Event<a class="headerlink" href="#error-event" title="Permanent link">¶</a></h3>
+<pre><code class="language-json">{
+  "specversion": "1.0",
+  "type": "Error",
+  "source": "FTS.JobHandler",
+  "subject": "JobSettingRead",
+  "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+  "time": "2024-01-15T10:35:00+0000",
+  "dataschema": "1.0",
+  "data": {
+    "correlationId": "corr-123456",
+    "accountId": "ACCOUNT001",
+    "errorCode": "CONFIG_NOT_FOUND",
+    "errorTitle": "Exception",
+    "errorMsg": "Could not find jobsettings.json for path: /mnt/jobconfig/..."
+  }
+}
+</code></pre>
+<h3 id="fireevent-output">FireEvent Output<a class="headerlink" href="#fireevent-output" title="Permanent link">¶</a></h3>
+<p>Generated by the <code>FireEvent</code> action:</p>
+<pre><code class="language-json">{
+  "specversion": "1.0",
+  "type": "Succeeded",
+  "source": "FTS.JobHandler",
+  "subject": "File Ready",
+  "id": "c3d4e5f6-a7b8-9012-cdef-345678901234",
+  "time": "2024-01-15T10:40:00+0000",
+  "data": {
+    "correlationId": "corr-123456",
+    "accountId": "ACCOUNT001",
+    "fileName": "output/processed_file.csv",
+    "fileSize": 524288
+  }
+}
+</code></pre>
+<h2 id="validation-rules">Validation Rules<a class="headerlink" href="#validation-rules" title="Permanent link">¶</a></h2>
+<p>The FileEventHandler validates incoming notifications:</p>
+<ol>
+<li><strong>Required Fields</strong>: <code>type</code>, <code>source</code>, <code>subject</code>, <code>data.accountId</code> must be non-empty</li>
+<li><strong>JSON Format</strong>: Must be valid JSON</li>
+<li><strong>Field Presence</strong>: All required fields must exist</li>
+</ol>
+<pre><code class="language-csharp">// From MessageHandler.cs
+if (string.IsNullOrEmpty(Notify.type) ||
+    string.IsNullOrEmpty(Notify.subject) ||
+    string.IsNullOrEmpty(Notify.source) ||
+    string.IsNullOrEmpty(Notify.data.accountId))
+{
+    Logger.Warning($"Garbage message: Type,Subject,Source,AccountID not provided");
+    return null;
+}
+</code></pre>
+<h2 id="default-values-from-appsettings">Default Values (from appsettings)<a class="headerlink" href="#default-values-from-appsettings" title="Permanent link">¶</a></h2>
+<pre><code class="language-json">{
+  "Notification": {
+    "Specversion": "1.0",
+    "Type_Error": "Error",
+    "Type_Success": "Succeeded",
+    "Source": "FTP.File.ExternalService",
+    "Dataschema": "1.0",
+    "Subject": {
+      "JobSettingRead": "JobSettingRead",
+      "JobSecretRead": "JobSecretRead"
+    },
+    "ErrorTitle": {
+      "Exception": "Exception"
+    }
+  }
+}
+</code></pre>
+<h2 id="usage-patterns">Usage Patterns<a class="headerlink" href="#usage-patterns" title="Permanent link">¶</a></h2>
+<h3 id="creating-notifications">Creating Notifications<a class="headerlink" href="#creating-notifications" title="Permanent link">¶</a></h3>
+<pre><code class="language-csharp">var notification = new Notification
+{
+    specversion = "1.0",
+    type = "Succeeded",
+    source = "FTS.JobHandler",
+    subject = "File Processed",
+    id = Guid.NewGuid().ToString(),
+    time = DateTime.UtcNow.ToString("yyyy-MM-ddThh:mm:ss+0000"),
+    data = new Notification.DataInfo
+    {
+        correlationId = existingCorrelationId,
+        accountId = accountId,
+        fileName = outputFileName,
+        fileSize = fileContent.Length
+    }
+};
+</code></pre>
+<h3 id="deserializing-events">Deserializing Events<a class="headerlink" href="#deserializing-events" title="Permanent link">¶</a></h3>
+<pre><code class="language-csharp">Notification notify = JsonConvert.DeserializeObject&lt;Notification&gt;(messageData);
+</code></pre>
+<h2 id="field-name-mapping">Field Name Mapping<a class="headerlink" href="#field-name-mapping" title="Permanent link">¶</a></h2>
+<p>Different contexts use different casing conventions for the same fields:</p>
+<table>
+<thead>
+<tr>
+<th>CloudEvent Field</th>
+<th>Placeholder</th>
+<th>Azure Table Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data.accountId</code></td>
+<td><code>{@Message.accountID}</code></td>
+<td><code>AccountID</code></td>
+<td>Account identifier</td>
+</tr>
+<tr>
+<td><code>data.correlationId</code></td>
+<td><code>{@Message.correlationId}</code></td>
+<td><code>CorrelationID</code></td>
+<td>Correlation tracking</td>
+</tr>
+<tr>
+<td><code>data.fileName</code></td>
+<td><code>{@Message.fileName}</code></td>
+<td><code>FileName</code></td>
+<td>File path</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td><code>{@Message.source}</code></td>
+<td><code>EventSource</code></td>
+<td>Event source</td>
+</tr>
+<tr>
+<td><code>subject</code></td>
+<td><code>{@Message.subject}</code></td>
+<td><code>EventSubject</code></td>
+<td>Event subject</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>{@Message.type}</code></td>
+<td><code>EventType</code></td>
+<td>Event type</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Important</strong>: When using placeholders in job configurations, use the exact casing shown in the "Placeholder" column (e.g., <code>{@Message.accountID}</code> not <code>{@Message.accountId}</code>).</p>
+</blockquote>
+<h2 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../architecture/event-driven-architecture.html">Event-Driven Architecture</a></li>
+<li><a href="job-config-model.html">Job ConfigModel</a></li>
+<li><a href="../job-configuration/action-types.html#fireevent">Action Types - FireEvent</a></li>
+</ul>
 
 
 
@@ -2672,10 +3494,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
